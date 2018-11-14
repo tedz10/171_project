@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>CS171 - HW 5</title>
+	<!--<script>-->
+        <!--$( function() {-->
+            <!--$( "#slider-range" ).slider({-->
+                <!--range: true,-->
+                <!--min: 1930,-->
+                <!--max: 2010,-->
+                <!--values: [ 1930, 2010 ],-->
+                <!--slide: function( event, ui ) {-->
+                    <!--$( "#amount" ).val( + ui.values[ 0 ] + " - " + ui.values[ 1 ] );-->
+                <!--}-->
+            <!--});-->
+            <!--$( "#amount" ).val( + $( "#slider-range" ).slider( "values", 0 ) +-->
+                <!--" - " + $( "#slider-range" ).slider( "values", 1 ) );-->
+            <!--var max = $( "#slider-range" ).slider( "values", 1 );-->
+			<!--console.log(max);-->
+        <!--} );-->
+	<!--</script>-->
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>FIFA World Cup<sup>TM</sup></h1>
+		<h2>All Time Statistics</h2>
+		<div class="row">
+			<div class = "col-md-8 left">
+		<div class="form-group">
+			<label for="ranking-type">Chart Data: </label>
+			<select class="form-control" id="ranking-type" onchange="updateVisualization()">
+				<option value="GOALS">Goals</option>
+				<option value="AVERAGE_GOALS">Average Goals</option>
+				<option value="MATCHES">Matches</option>
+				<option value="TEAMS">Teams</option>
+				<option value="AVERAGE_ATTENDANCE">Average Attendance</option>
+			</select>
+			<div id="time-period">
+				<label id = "time-input" >Time Period</label>
+				<input type="year" id="start" name="start"
+				min = "2000" max = "2018" value="1930"/>
+				<input type="year" id="end" name="start"
+					   min = "2000" max = "2018" value="2010"/>
+				<button type="button" class="btn btn-primary" onclick="updateVisualization()" >Filter</button></div>
+			</div>
+			<!--<div id = "time-period"><label for="amount">Time Period:</label>-->
+			<!--<input type="text" id="amount" readonly style="border:0; color:#130000; font-weight:bold;">-->
+			<!--<div id="slider-range"></div>-->
+
+		<!-- Parent container for the visualization -->
+		<div id="chart-area"></div></div>
+			<div class = "col-md-4 left">
+				<h3 id = "specific_name">Click Data Point to Get Tournament Specific Details</h3>
+				<table style="width:100%" class="table sortable" id="mytable">
+					<thead>
+					<tr>
+						<th>Details</th>
+						<th>Value</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Winner</td>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Goals</td>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Average Goals</td>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Matches</td>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Teams</td>
+						<th></th>
+					</tr>
+					<tr>
+						<td>Average Attendance</td>
+						<th></th>
+					</tr>
+
+					</tbody>
+				</table>
+			</div>
+	</div>
+
+
+
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3-tip.js"></script>
+
+	<!-- Your implementation -->
+	<script src="js/main.js"></script>
+	<!--<script src="js/slider.js"></script>-->
+</body>
+</html>
