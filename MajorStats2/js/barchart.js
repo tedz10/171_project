@@ -72,12 +72,17 @@ BarChart.prototype.initVis = function() {
     vis.x = d3.scaleLinear()
         .range([0, vis.width - vis.margin.right/2]);
 
+    vis.svg.append("text")
+        .attr("x", 0)
+        .attr("y", -10)
+        .attr("class", "labels")
+        .text(vis.config.title);
     vis.svg.append("g")
         .attr("class","y-axis axis")
         .attr("transform","translate(20,0)")
 
     vis.wrangleData();
-}
+};
 
 BarChart.prototype.wrangleData = function() {
     var vis = this;
@@ -85,9 +90,6 @@ BarChart.prototype.wrangleData = function() {
     // parse for config
     // parse for year
     vis.displayData = vis.data.filter(function(d){
-        console.log(formatDate(curYear))
-        console.log(formatDate(d.Year))
-        console.log(formatDate(curYear) === formatDate(d.Year))
         return formatDate(d.Year) === formatDate(curYear);
     })
     vis.updateVis()
@@ -109,7 +111,7 @@ BarChart.prototype.updateVis = function(){
     vis.y.domain(vis.displayData.map(function(d){return d.Team}));
     vis.x.domain([
         0,
-        d3.max(vis.displayData, function(d){ return d[vis.config]})
+        d3.max(vis.displayData, function(d){ return d[vis.config.key]})
         // vis.width
     ]);
     vis.yAxis = d3.axisLeft()
@@ -121,7 +123,6 @@ BarChart.prototype.updateVis = function(){
     //draw rectangles
     var rect = vis.svg.selectAll("rect")
         .data(vis.displayData);
-    console.log(vis.displayData[0].config)
     rect.enter().append("rect")
         .attr("class", "bars")
         .merge(rect)
@@ -138,7 +139,7 @@ BarChart.prototype.updateVis = function(){
         // .attr("width", 30)
         // fix width
         .attr("width", function(d){
-            return vis.x(d[vis.config])
+            return vis.x(d[vis.config.key])
         })
         .attr("fill", "steelblue");
 
@@ -154,14 +155,14 @@ BarChart.prototype.updateVis = function(){
         .transition()
         .duration(800)
         .attr("x", function(d){
-            return vis.x(d[vis.config]) - 20;
+            return vis.x(d[vis.config.key]) - 20;
             // return vis.width;
         })
         .attr("y", function(d){
             return (vis.y(d.Team) + vis.y.bandwidth()/2 + 5)
         })
         .text(function(d){
-            return d[vis.config];
+            return d[vis.config.key];
         })
         .attr("fill", "white");
 

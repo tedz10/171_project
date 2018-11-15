@@ -31,13 +31,13 @@ LineChart.prototype.loadData = function() {
 
         // Store csv data in global variable
         vis.pats_data = vis.data.filter(function(d){
-            return (d.Team ==="NE")
+            return (d.Team === "NE")
         })
         vis.lions_data = vis.data.filter(function(d){
-            return (d.Team ==="DET")
+            return (d.Team === "DET")
         })
         vis.browns_data = vis.data.filter(function(d){
-            return (d.Team ==="CLE")
+            return (d.Team === "CLE")
         })
         // console.log(data)
 
@@ -157,21 +157,46 @@ LineChart.prototype.initVis = function() {
     //
     //
     // // create the circles to emphasize
-    var circle = vis.svg.selectAll(".circPats")
+    var circle = vis.svg.selectAll("circle")
         .data(vis.data);
 
     circle.enter().append("circle")
         .attr("class", "circEmphasis circPats")
         .merge(circle)
-        .transition()
+        .on("click", function(d){
+            console.log("what");
+            return (updateVis(d));
+            // updateVis(d);
+
+            // circle.exit().remove()
+        })
+        // .transition()
         .attr("cx", function(d) { return vis.x(d.Year); })
         .attr("cy", function(d) { return vis.y(d.wins); })
         .attr("r", "5")
-        .duration(800)
+        .style("pointer-events","visible")
+        // .duration(800)
         .attr("fill", "black");
 
-    circle.on("click", function(d){
-        updateVis(d);
-    });
+    circle.transition()
+        .duration(800);
+
+    console.log("pre-click");
+
+    // circle.on("click", function(){
+    //     console.log("what");
+    //     // return (updateVis(d));
+    //     // updateVis(d);
+    //
+    //     // circle.exit().remove()
+    // });
+
+    console.log("post-click");
 
 }
+// function updateVis(d){
+//     console.log("what")
+//     return console.log("What")
+//     var curYear = d.Year;
+//
+// }
