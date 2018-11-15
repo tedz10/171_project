@@ -1,14 +1,25 @@
-var barcharts = [];
+var barcharts1 = [];
+var barcharts2 = [];
+var barcharts3 = [];
+var barcharts4 = [];
 var linechart;
 var bar;
 
 var formatDate = d3.timeFormat("%Y");
 var parseDate = d3.timeParse("%Y");
 
-var configs1 = ["OffensivePassingYards", "DefensivePassingYards"];
-var configs2 = ["OffensiveRushingYards", "DefensiveRushingYards"];
-var configs3 = ["OffensiveTouchdowns","TouchdownsScoredAgainst"];
-var configs4 = ["Interceptions","Picks"];
+var curYear = parseDate("2017");
+
+var configs1 = [{key: "OffensivePassingYards", title: "Offensive Passing Yards"},
+    {key: "DefensivePassingYards", title: "Passing Yards Let Up"}];
+var configs2 = [{key: "OffensiveRushingYards", title: "Offensive Rushing Yards"},
+    {key: "DefensiveRushingYards", title: "Rushing Yards Let Up"}];
+var configs3 = [{key: "OffensiveTouchdowns", title: "Touchdowns Scored"},
+    {key: "TouchdownsScoredAgainst", title: "Touchdowns Let Up"}];
+// var configs3 = ["OffensiveTouchdowns","TouchdownsScoredAgainst"];
+var configs4 = [{key: "Interceptions", title: "Interceptions Thrown"},
+    {key: "Picks", title: "Interceptions"}];
+// var configs4 = ["Interceptions","Picks"];
 
 
 // initialize graph path
@@ -62,27 +73,16 @@ var configs4 = ["Interceptions","Picks"];
             bar2 = new BarChart("chart2", data, configs2[i]);
             bar3 = new BarChart("chart3", data, configs3[i]);
             bar4 = new BarChart("chart4", data, configs4[i]);
+            barcharts1.push(bar1)
+            barcharts2.push(bar2)
+            barcharts3.push(bar3)
+            barcharts4.push(bar4)
         }
 
     }
 );
 
 // Show details for a specific FIFA World Cup
-function showEdition(d){
-    document.getElementById("specific_name").innerHTML = d.EDITION;
-    var winner = d.WINNER;
-    var goals = d.GOALS;
-    var avg_goals = d.AVERAGE_GOALS;
-    var matches = d.MATCHES;
-    var teams = d.TEAMS;
-    var avg_atten = d.AVERAGE_ATTENDANCE;
-    var stats = [winner, goals, avg_goals, matches, teams, avg_atten];
-    for (var i = 0; i < stats.length; i++) {
-        mytable.rows[i + 1].cells[1].innerHTML = stats[i];
-    }
-    console.log(d);
-	
-}
 
 
 // create a function that makes the tooltip output visually appealing
@@ -98,4 +98,17 @@ function tooltipText(str){
         return results;
     }
     return parts;
+}
+
+
+function updateVis(d){
+    console.log(d.Year)
+    curYear = d.Year;
+    for (var i = 0; i <2; i++) {
+        barcharts1[i].wrangleData()
+        barcharts2[i].wrangleData()
+        barcharts3[i].wrangleData()
+        barcharts4[i].wrangleData()
+    }
+    document.getElementById("specific_name").innerHTML = "Major stats for " + formatDate(d.Year);
 }
