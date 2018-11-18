@@ -65,13 +65,13 @@
   left: 0;
 }
 
-.form-control{
-  width: 50%;
-}
+/*.form-control{*/
+  /*width: 50%;*/
+/*}*/
 
-.time-input{
-  margin-top:100px;
-}
+/*.time-input{*/
+  /*margin-top:100px;*/
+/*}*/
 body { font: 12px Arial;}
 
 path {
@@ -113,12 +113,9 @@ div.tooltip {
 
 h1{
   margin-top: 20px;
-  color: green;
+  /*color: green;*/
 }
 
-h2{
-  color:green;
-}
 
 .pats_line{
   stroke: blue;
@@ -131,3 +128,93 @@ h2{
 .browns_line{
   stroke: orange;
 }
+
+
+/*PARALLAX*/
+
+/*.parallax {*/
+
+  /*height: 700px;*/
+
+  /*background-attachment: fixed;*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+/*}*/
+
+
+.parallax {
+  position: relative;
+  opacity: 0.75;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#p1 {
+  background-image: url('football4.jpg');
+  min-height: 100%;
+}
+
+#p2 {
+  background-image: url('football3.jpg');
+  min-height: 600px;
+}
+
+#p3 {
+  background-image: url('jjwatt.jpg');
+  min-height: 600px;
+}
+
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  font-size: 30px;
+  letter-spacing: 7px;
+  /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+  /*font-weight: 500;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  /*color: #616161;*/
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 500;
+  color: #616161;
+}
+
+.info {
+  color: #777;
+  background-color:white;
+  text-align:center;
+  padding:50px 80px;
+  /*text-align: justify;*/
+  text-align:center;
+}
+
+h2, h3, h4 {
+  letter-spacing: 3px;
+  color: #000000;
+  text-align: center
+}
+
+p {
+  font-size: 13px;
+}
+

@@ -119,3 +119,15 @@ h1{
 h2{
   color:green;
 }
+
+.pats_line{
+  stroke: blue;
+}
+
+.lions_line{
+  stroke: silver;
+}
+
+.browns_line{
+  stroke: orange;
+}
