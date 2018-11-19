@@ -169,6 +169,17 @@ h1{
 }
 
 
+#p4 {
+  background-image: url('marshawn.jpg');
+  min-height: 600px;
+}
+
+#p5 {
+  background-image: url('brady.jpg');
+  min-height: 600px;
+}
+
+
 .caption {
   position: absolute;
   left: 0;
