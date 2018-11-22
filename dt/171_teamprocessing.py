@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 # team data processing
 def getTeamStats(year):
     indices = ["", " (1)", " (2)", " (3)", " (4)"]

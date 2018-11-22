@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e2de11e-ab5b-4b9f-a9cc-50fe6d336147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2/data/tree.json" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2/data/tree.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2/js/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2/js/tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dt/.ipynb_checkpoints/dt-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/dt/.ipynb_checkpoints/dt-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dt/dt.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/dt/dt.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dt/tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/dt/tree.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dt/171_teamprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/dt/171_teamprocessing.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
