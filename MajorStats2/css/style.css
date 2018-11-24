@@ -229,3 +229,43 @@ p {
   font-size: 13px;
 }
 
+.noplayoff{
+  width: 20px;
+  height: 20px;
+  background-color:LightPink;
+}
+
+
+.playoff{
+  width: 20px;
+  height: 20px;
+  background-color:LightGreen;
+}
+
+
+
+
+.bar-chart {
+  background-color: #C7D9D9;
+}
+
+
+#image {
+  padding-top: 75px;
+}
+
+#details {
+  padding-top: 75px;
+}
+
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+
+  padding: 14px;
+  text-align: center;
+}
+
