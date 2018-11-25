@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e2de11e-ab5b-4b9f-a9cc-50fe6d336147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dt/171_teamprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/dt/171_teamprocessing.py" afterDir="false" />
-    </list>
+    <list default="true" id="9e2de11e-ab5b-4b9f-a9cc-50fe6d336147" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -51,7 +49,7 @@
     <session id="1088613348">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.opened" value="2" />
@@ -261,7 +259,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="23" width="1244" height="777" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24938676" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
