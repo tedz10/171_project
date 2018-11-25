@@ -94,7 +94,7 @@ function loadData(error, data, rushingData, turnOverData, data1, data2, treeData
     //******Turnover  CHART******//
 
     //Create rushing bar chart
-    turnoverBar = new Turnover("info6", turnOverData);
+    turnoverBar = new Turnover("turnoverChart", turnOverData);
     console.log("turnoverbar end");
 
 
@@ -118,6 +118,11 @@ function createVis() {
 
 // this is for opponent yards
 
+
+
+var margin2 = {top: 140, right: 60, bottom: 30, left: 60},
+    width2 = 800 - margin2.left - margin2.right,
+    height2 = 500 - margin2.top - margin2.bottom;
 // Load CSV file
 d3.csv("data/OpponentOffensiveYards.csv", function(data){
 
@@ -134,21 +139,21 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
     });
 
     // Append a new SVG area
-    var svg = d3.select("#chart-area-yards").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+    var svg2 = d3.select("#chart-area-yards").append("svg")
+        .attr("width", width2 + margin2.left + margin2.right)
+        .attr("height", height2 + margin2.top + margin2.bottom)
         .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 
     // X scale
     var incomeScale = d3.scaleLog()
         .domain([d3.min(data, function(d){ return d.Offensive_Yards_Allowed }) - 100, d3.max(data, function(d){ return d.Offensive_Yards_Allowed })])
-        .range([0, width]);
+        .range([0, width2]);
 
     // Y scale
     var lifeExpectancyScale = d3.scaleLinear()
         .domain([d3.min(data, function(d){ return d.Total_Wins }) - 5, d3.max(data, function(d){ return d.Total_Wins }) + 5])
-        .range([height, 0]);
+        .range([height2, 0]);
 
     // Radius Scale
     var populationScale = d3.scaleLinear()
@@ -173,7 +178,7 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
 
 
     // Map data to visual elements (SVG circles)
-    var circles = svg.selectAll("circle")
+    var circles = svg2.selectAll("circle")
         .data(data)
         .enter()
         .append("circle")
@@ -220,7 +225,7 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
 
 
     // Add Text Labels
-    svg.selectAll("text")
+    svg2.selectAll("text")
         .data(data)
         .enter()
         .append("text")
@@ -244,6 +249,47 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
 
 
 
+    // create legends
+    svg2
+        .append("text")
+        // .attr("class", "treeLegend")
+        .attr("x", 0)
+        .attr("y", -100)
+        .attr("class", "treeLegendLabel")
+        .text("Legend")
+        .style("font-weight", "bold")
+        .style("font-size", "16px")
+    svg2
+        .append("rect")
+        // .attr("class", "treeLegend")
+        .attr("x", 0)
+        .attr("y", -80)
+        .attr("fill", "LightPink")
+        .attr("width", 20)
+        .attr("height", 20);
+
+    svg2
+        .append("text")
+        // .attr("class", "treeLegend")
+        .attr("x", 30)
+        .attr("y", -65)
+        .text("Not a Playoff Team")
+
+    svg2
+        .append("rect")
+        // .attr("class", "treeLegend")
+        .attr("x", 0)
+        .attr("y", -50)
+        .attr("fill", "LightGreen")
+        .attr("width", 20)
+        .attr("height", 20);
+
+    svg2
+        .append("text")
+        // .attr("class", "treeLegend")
+        .attr("x", 30)
+        .attr("y", -35)
+        .text("Playoff Team")
 
 
 
@@ -263,19 +309,19 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
 
     // Append axes to the SVG drawing area
 
-    svg.append("g")
+    svg2.append("g")
         .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(0," + height2 + ")")
         .call(xAxis)
         .append("text")
         .attr("class", "axis-label")
         .attr("y", -15)
-        .attr("x", width)
+        .attr("x", width2)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
         .text("offensive yards allowed");
 
-    svg.append("g")
+    svg2.append("g")
         .attr("class", "y axis")
         .call(yAxis)
         .append("text")
@@ -285,5 +331,4 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
         .attr("dy", ".71em")
         .style("text-anchor", "end")
         .text("total wins from 2015");
-    console.log("the scatterplotSCATTERSCATTERSCATTER")
 });

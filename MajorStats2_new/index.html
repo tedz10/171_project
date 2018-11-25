@@ -139,8 +139,8 @@
 
 					<!-- Parent container for the scatterplot -->
 					<div id="chart-area-yards">
-						<div class="legendrow"><div class="noplayoff"></div>not made to playoff</div>
-						<div class="legendrow"><div class="playoff"></div>made to playoff</div>
+						<!--<div class="legendrow"><div class="noplayoff"></div>not made to playoff</div>-->
+						<!--<div class="legendrow"><div class="playoff"></div>made to playoff</div>-->
 					</div>
 
 					<p class="source-desc">Source: <a href="http://www.gapminder.org/data">http://www.gapminder.org/data</a></p>
@@ -202,39 +202,51 @@
 		<!--<br>-->
 		<p>umsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
 
-		<br>
-		<br>
+		<div id = "turnoverChart"></div>
 
 		<div class="row turnoverStats">
 
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-4">
-						<div class="column" id="words"><p>Team: CAR</p>
-							<p>Turnover Differential: 26</p>
-							<p>Number of interceptions: 24</p>
-							<p>Number of interceptions thrown: 11</p>
-							<p>Number of fumbles lost: 15</p>
-							<p>Number of fumbles recovered: 28</p>
-							<p>Total wins: 15</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-					</div>
-					<div class="col-md-4">
+					<div class="col-md-5">
+						<h3 id = "specific_name">CAR: 2015</h3>
+						<table style="width:100%" class="table sortable" id="mytable">
+							<thead>
+							<tr>
+								<th>Statistic</th>
+								<th>Value</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Turnover Differential</td>
+								<th>26 </th>
+							</tr>
+							<tr>
+								<td>Number of Interceptions</td>
+								<th>24</th>
+							</tr>
+							<tr>
+								<td>Number of Interceptions Thrown</td>
+								<th>11</th>
+							</tr>
+							<tr>
+								<td>Number of Fumbles Lost</td>
+								<th>15</th>
+							</tr>
+							<tr>
+								<td>Number of Fumbles Recovered</td>
+								<th>28</th>
+							</tr>
+							<tr>
+								<td>Playoffs?</td>
+								<th>TRUE</th>
+							</tr>
 
-						<div class="column" id="details"><div id="buildingName" class="labelHeading"></div> </br>
-							<!--<div id="season" class="labels"></div> </br>-->
-							<div id="height" class="labels"></div> </br>
-							<div id="numberofinterceptions" class="labels"></div> </br>
-							<div id="numberofinterceptionsthrown" class="labels"></div> </br>
-							<div id="numberoffumbleslost" class="labels"></div> </br>
-							<div id="numberoffumblesrecovered" class="labels"></div></br>
-							<div id="playoffmade" class="labels"></div></div>
-					</div>
-					</div>
-
-						<!--<div class="column" id="words"><p>Team: CAR</p>-->
+							</tbody>
+						</table>
+						<!--<div class="col-md-4" id="words">-->
+							<!--<p>Team: CAR</p>-->
 							<!--<p>Turnover Differential: 26</p>-->
 							<!--<p>Number of interceptions: 24</p>-->
 							<!--<p>Number of interceptions thrown: 11</p>-->
@@ -242,16 +254,57 @@
 							<!--<p>Number of fumbles recovered: 28</p>-->
 							<!--<p>Total wins: 15</p>-->
 						<!--</div>-->
+					</div>
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-5">
+						<h3 id = "specific_name2">Click Bars for Info</h3>
+						<table style="width:100%" class="table sortable" id="mytable">
+							<thead>
+							<tr>
+								<th>Statistic</th>
+								<th>Value</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Turnover Differential</td>
+								<th id = "height"></th>
+							</tr>
+							<tr>
+								<td>Number of Interceptions</td>
+								<th id = "numberofinterceptions"></th>
+							</tr>
+							<tr>
+								<td>Number of Interceptions Thrown</td>
+								<th id = "numberofinterceptionsthrown"></th>
+							</tr>
+							<tr>
+								<td>Number of Fumbles Lost</td>
+								<th id ="numberoffumbleslost"></th>
+							</tr>
+							<tr>
+								<td>Number of Fumbles Recovered</td>
+								<th id = "numberoffumblesrecovered"></th>
+							</tr>
+							<tr>
+								<td>Playoffs?</td>
+								<th id = "playoffmade"></th>
+							</tr>
 
-						<!--<div class="column" id="image"></div>-->
-						<!--<div class="column" id="details"><div id="buildingName" class="labelHeading"></div> </br>-->
+							</tbody>
+						</table>
+						<!--<div class="column labelHeading" id="details"><div id="buildingName"></div>-->
 							<!--&lt;!&ndash;<div id="season" class="labels"></div> </br>&ndash;&gt;-->
-							<!--<div id="height" class="labels"></div> </br>-->
-							<!--<div id="numberofinterceptions" class="labels"></div> </br>-->
-							<!--<div id="numberofinterceptionsthrown" class="labels"></div> </br>-->
-							<!--<div id="numberoffumbleslost" class="labels"></div> </br>-->
+							<!--<div id="height" class="labels"></div>-->
+							<!--<div id="numberofinterceptions" class="labels"></div>-->
+							<!--<div id="numberofinterceptionsthrown" class="labels"></div>-->
+							<!--<div id="numberoffumbleslost" class="labels"></div>-->
 							<!--<div id="numberoffumblesrecovered" class="labels"></div></br>-->
 							<!--<div id="playoffmade" class="labels"></div></div>-->
+					<!--</div>-->
+					</div>
+
 
 			</div>
 		</div>
@@ -259,15 +312,9 @@
 
 
 
-		<div id="info">
-			<div id="instructions">
-				<h5>Click on a Team to see more information</h5>
-			</div>
-		</div>
 
 	</div>
 
-	<br>
 
 
 

@@ -1,0 +1,11 @@
+Year,Teams,Turnover_Differential,Total_Wins,number_of_interceptions,number_of_interceptions_thrown,number_of_fumbles_lost,number_of_fumbles_recovered,Playoff_Made,image
+2015,CAR,26,15,24,11,15,28,TRUE,CAR.jpg
+2015,KC,22,11,22,8,11,19,TRUE,KC.jpg
+2015,NE,19,12,13,9,11,26,TRUE,NE.jpg
+2015,ARI,14,13,21,14,21,28,TRUE,ARI.jpg
+2015,WAS,14,9,13,11,22,34,TRUE,WAS.jpg
+2015,BAL,-12,5,8,21,12,13,FALSE,BAL.jpg
+2015,JAC,-13,5,11,20,21,17,FALSE,JAC.jpg
+2015,ATL,-15,8,16,18,28,15,FALSE,ATL.jpg
+2015,DAL,-19,4,10,22,21,14,FALSE,DAL.jpg
+2015,TEN,-19,3,12,19,26,14,FALSE,TEN.jpg
