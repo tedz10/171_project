@@ -175,4 +175,4 @@ BarChart.prototype.updateVis = function(){
     vis.svg.select(".y-axis").call(vis.yAxis)
         .transition()
         .duration(300);
-}
+};

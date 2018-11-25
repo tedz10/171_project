@@ -148,187 +148,187 @@ var yAxis = d3.axisLeft(y);
 
 //load csv and sort our data
 
-d3.csv("data/strongandpoorlyperformingteams.csv", function(data) {
-
-
-    data.sort( function(a, b){
-        return (+b.Turnover_Differential) - (+a.Turnover_Differential);
-
-    });
-
-    console.log(data);
-
-    totalbuildings = data;
-
-
-    //converting strings to numbers
-
-    for (var i = 0; i< totalbuildings.length; i++){
-        totalbuildings[i].Turnover_Differential = +totalbuildings[i].Turnover_Differential;
-        totalbuildings[i].Total_Wins = +totalbuildings[i].Total_Wins;
-        totalbuildings[i].number_of_interceptions = +totalbuildings[i].number_of_interceptions;
-        totalbuildings[i].number_of_interceptions_thrown = +totalbuildings[i].number_of_interceptions_thrown;
-        totalbuildings[i].number_of_fumbles_lost = +totalbuildings[i].number_of_fumbles_lost;
-        totalbuildings[i].number_of_fumbles_recovered = +totalbuildings[i].number_of_fumbles_recovered;
-        totalbuildings[i].Year = +totalbuildings[i].Year;
-
-
-    }
-
-
-    // update our Scale the range of the data in the domains
-    x.domain(d3.extent(data, function (d) {
-        return d.Turnover_Differential;
-    }));
-    y.domain(data.map(function (d) {
-        return d.Teams;
-    }));
-
-
-    svg = d3.select("#chart").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-// set up tooltip
-
-    var tooltip = d3.select("body").append("div").attr("class", "toolTip");
-
-
-
-    //add bar graph
-
-    svg.selectAll(".bar")
-        .data(totalbuildings)
-        .enter()
-        .append("rect")
-        .attr("class", function (d) { return "bar bar--" + (d.value < 0 ? "negative" : "positive");})
-
-        .attr("fill", function(d){
-            if(d.Playoff_Made == "TRUE")
-                return "LightGreen";
-            else
-                return "LightPink";
-        })
-
-
-
-
-
-
-
-
-        //.attr("fill", "Plum")
-        .attr("x", function(d) { return x(Math.min(0, d.Turnover_Differential)); })
-
-        .attr("y", function(d) { return y(d.Teams); })
-        .attr("width", function(d){return Math.abs(x(d.Turnover_Differential) - x(0));})
-
-        .attr("height", function(d,i){return y.bandwidth();})
-        //.attr("class", "barGraph")
-
-        .on("mousemove", function(d){
-            tooltip
-                .style("left", d3.event.pageX - 50 + "px")
-                .style("top", d3.event.pageY - 70 + "px")
-                .style("display", "inline-block")
-                .html((d.Teams) + "<br>"  + (d.Turnover_Differential));
-        })
-        .on("mouseout", function(d){ tooltip.style("display", "none");})
-
-
-
-
-        .on("click", function(d){
-            console.log(d);
-            var elt = document.getElementById("instructions");
-            console.log('elt:' + elt);
-            if (elt != null) {
-                var parent = elt.parentElement;
-                parent.removeChild(elt);
-
-                console.log('parent:' + parent);
-
-            }
-
-            $('#buildingName').text('Team: ' + d.Teams);
-            $('#height').text('Turnover Differential: ' + d.Turnover_Differential);
-            $('#season').text('Season: ' + d.Year);
-            $('#numberofinterceptions').text('Number of Interceptions: ' + d.number_of_interceptions);
-            $('#numberofinterceptionsthrown').text('Number of Interceptions Thrown: ' + d.number_of_interceptions_thrown);
-            $('#numberoffumbleslost').text('Number of Fumbles Lost: ' + d.number_of_fumbles_lost);
-            $('#numberoffumblesrecovered').text('Number of Fumbles Recovered: ' + d.number_of_fumbles_recovered);
-            $('#playoffmade').text('Whether Madre to Playoff: ' + d.Playoff_Made);
-
-
-            d3.select("#image")
-                .select('img').remove();
-
-
-            d3.select("#image")
-                .append('img')
-                .attr("width", 250)
-                .attr("height", 250)
-                .attr('src', "data/img/"+d.image);
-
-        });
-
-
-
-    // add the x Axis
-    svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
-
-// add the y Axis
-    svg.append("g")
-        .attr("class", "y axis")
-        .attr("transform", "translate(" + x(0) + ",0)")
-        .call(d3.axisRight(y));
-
-    //add pics and the click function
-
-    svg.on("click", function(d) {
-        // Do something after click
-    });
-
-
-    var imgs = svg.selectAll("image").data([0]);
-    imgs.enter()
-        .append("svg:image");
-
-
-
-    function showImage() {
-        var img = document.getElementById('myImageId');
-        img.style.visibility = 'visible';
-    }
-
-
-    var images = [];
-
-    svg.selectAll('.Teams')
-        .data(totalbuildings)
-        .enter()
-        .append('image')
-        .on('click', function(d) {
-
-
-            d3.select("#tool").style("opacity", 1.0);
-            // d3.select("#tool").html(d.imgsrc);
-            images.push(d.imgsrc);
-            d3.select('#tool')
-                .selectAll("img")
-                .data(images)
-                .enter()
-                .append('img')
-                .attr("width", 50)
-                .attr("height", 50)
-                .attr('src', function(d, i) {
-                    return d
-                });
-        });
-
-
-});
+// d3.csv("data/strongandpoorlyperformingteams.csv", function(data) {
+//
+//
+//     data.sort( function(a, b){
+//         return (+b.Turnover_Differential) - (+a.Turnover_Differential);
+//
+//     });
+//
+//     console.log(data);
+//
+//     totalbuildings = data;
+//
+//
+//     //converting strings to numbers
+//
+//     for (var i = 0; i< totalbuildings.length; i++){
+//         totalbuildings[i].Turnover_Differential = +totalbuildings[i].Turnover_Differential;
+//         totalbuildings[i].Total_Wins = +totalbuildings[i].Total_Wins;
+//         totalbuildings[i].number_of_interceptions = +totalbuildings[i].number_of_interceptions;
+//         totalbuildings[i].number_of_interceptions_thrown = +totalbuildings[i].number_of_interceptions_thrown;
+//         totalbuildings[i].number_of_fumbles_lost = +totalbuildings[i].number_of_fumbles_lost;
+//         totalbuildings[i].number_of_fumbles_recovered = +totalbuildings[i].number_of_fumbles_recovered;
+//         totalbuildings[i].Year = +totalbuildings[i].Year;
+//
+//
+//     }
+//
+//
+//     // update our Scale the range of the data in the domains
+//     x.domain(d3.extent(data, function (d) {
+//         return d.Turnover_Differential;
+//     }));
+//     y.domain(data.map(function (d) {
+//         return d.Teams;
+//     }));
+//
+//
+//     svg = d3.select("#chart").append("svg")
+//         .attr("width", width + margin.left + margin.right)
+//         .attr("height", height + margin.top + margin.bottom)
+//         .append("g")
+//         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+//
+// // set up tooltip
+//
+//     var tooltip = d3.select("body").append("div").attr("class", "toolTip");
+//
+//
+//
+//     //add bar graph
+//
+//     svg.selectAll(".bar")
+//         .data(totalbuildings)
+//         .enter()
+//         .append("rect")
+//         .attr("class", function (d) { return "bar bar--" + (d.value < 0 ? "negative" : "positive");})
+//
+//         .attr("fill", function(d){
+//             if(d.Playoff_Made == "TRUE")
+//                 return "LightGreen";
+//             else
+//                 return "LightPink";
+//         })
+//
+//
+//
+//
+//
+//
+//
+//
+//         //.attr("fill", "Plum")
+//         .attr("x", function(d) { return x(Math.min(0, d.Turnover_Differential)); })
+//
+//         .attr("y", function(d) { return y(d.Teams); })
+//         .attr("width", function(d){return Math.abs(x(d.Turnover_Differential) - x(0));})
+//
+//         .attr("height", function(d,i){return y.bandwidth();})
+//         //.attr("class", "barGraph")
+//
+//         .on("mousemove", function(d){
+//             tooltip
+//                 .style("left", d3.event.pageX - 50 + "px")
+//                 .style("top", d3.event.pageY - 70 + "px")
+//                 .style("display", "inline-block")
+//                 .html((d.Teams) + "<br>"  + (d.Turnover_Differential));
+//         })
+//         .on("mouseout", function(d){ tooltip.style("display", "none");})
+//
+//
+//
+//
+//         .on("click", function(d){
+//             console.log(d);
+//             var elt = document.getElementById("instructions");
+//             console.log('elt:' + elt);
+//             if (elt != null) {
+//                 var parent = elt.parentElement;
+//                 parent.removeChild(elt);
+//
+//                 console.log('parent:' + parent);
+//
+//             }
+//
+//             $('#buildingName').text('Team: ' + d.Teams);
+//             $('#height').text('Turnover Differential: ' + d.Turnover_Differential);
+//             $('#season').text('Season: ' + d.Year);
+//             $('#numberofinterceptions').text('Number of Interceptions: ' + d.number_of_interceptions);
+//             $('#numberofinterceptionsthrown').text('Number of Interceptions Thrown: ' + d.number_of_interceptions_thrown);
+//             $('#numberoffumbleslost').text('Number of Fumbles Lost: ' + d.number_of_fumbles_lost);
+//             $('#numberoffumblesrecovered').text('Number of Fumbles Recovered: ' + d.number_of_fumbles_recovered);
+//             $('#playoffmade').text('Whether Madre to Playoff: ' + d.Playoff_Made);
+//
+//
+//             d3.select("#image")
+//                 .select('img').remove();
+//
+//
+//             d3.select("#image")
+//                 .append('img')
+//                 .attr("width", 250)
+//                 .attr("height", 250)
+//                 .attr('src', "data/img/"+d.image);
+//
+//         });
+//
+//
+//
+//     // add the x Axis
+//     svg.append("g")
+//         .attr("transform", "translate(0," + height + ")")
+//         .call(d3.axisBottom(x));
+//
+// // add the y Axis
+//     svg.append("g")
+//         .attr("class", "y axis")
+//         .attr("transform", "translate(" + x(0) + ",0)")
+//         .call(d3.axisRight(y));
+//
+//     //add pics and the click function
+//
+//     svg.on("click", function(d) {
+//         // Do something after click
+//     });
+//
+//
+//     var imgs = svg.selectAll("image").data([0]);
+//     imgs.enter()
+//         .append("svg:image");
+//
+//
+//
+//     function showImage() {
+//         var img = document.getElementById('myImageId');
+//         img.style.visibility = 'visible';
+//     }
+//
+//
+//     var images = [];
+//
+//     svg.selectAll('.Teams')
+//         .data(totalbuildings)
+//         .enter()
+//         .append('image')
+//         .on('click', function(d) {
+//
+//
+//             d3.select("#tool").style("opacity", 1.0);
+//             // d3.select("#tool").html(d.imgsrc);
+//             images.push(d.imgsrc);
+//             d3.select('#tool')
+//                 .selectAll("img")
+//                 .data(images)
+//                 .enter()
+//                 .append('img')
+//                 .attr("width", 50)
+//                 .attr("height", 50)
+//                 .attr('src', function(d, i) {
+//                     return d
+//                 });
+//         });
+//
+//
+// });
