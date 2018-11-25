@@ -33,7 +33,7 @@ d3.queue()
     .defer(d3.json,"data/nfl_ppg.json")
     .await(loadData);
 
-loadData();
+// loadData();
 
 function loadData(error, data, rushingData, turnOverData, data1, data2, treeData) {
 
@@ -285,7 +285,5 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
         .attr("dy", ".71em")
         .style("text-anchor", "end")
         .text("total wins from 2015");
-
-
-
+    console.log("the scatterplotSCATTERSCATTERSCATTER")
 });
