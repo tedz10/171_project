@@ -74,6 +74,24 @@
 		<hr>
 		<!--<br>-->
 		<p>umsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
+
+		<div class="container-fluid">
+
+
+			<!-- Visualization placeholders -->
+
+			<!--<div id="timeline"></div>-->
+			<div class="row">
+				<div class="col-md-6">
+					<div id="stacked-area-chart"></div>
+				</div>
+				<div class="col-md-6">
+					<div id="stacked-area-chart2"></div>
+				</div>
+			</div>
+
+		</div>
+
 	</div>
 
 	<br>
@@ -179,35 +197,71 @@
 	</div>
 
 	<div class = "info" id = "info6">
-		<h4>DISCUSS POINT 4 BASED ON MAIN VISUALIZATION ABOVE</h4>
+		<h4>TURNOVERS KILL</h4>
 		<hr>
 		<!--<br>-->
 		<p>umsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
 
+		<br>
+		<br>
 
 		<div class="row turnoverStats">
-			<div class="column" id="words"><p>CAR</p>
-				<p>Turnover Differential: 26</p>
-				<p>Total_Wins: 15</p>
-				<p>Number of interceptions: 24</p>
-				<p>Number of interceptions thrown: 11</p>
-				<p>Number of fumbles lost: 15</p>
-				<p>Number of fumbles recovered: 28</p></div>
-			<div class="column" id="image"></div>
-			<div class="column" id="details"><div id="buildingName" class="labelHeading"></div> </br>
-				<div id="season" class="labels"></div> </br>
-				<div id="height" class="labels"></div> </br>
-				<div id="numberofinterceptions" class="labels"></div> </br>
-				<div id="numberofinterceptionsthrown" class="labels"></div> </br>
-				<div id="numberoffumbleslost" class="labels"></div> </br>
-				<div id="numberoffumblesrecovered" class="labels"></div></br>
-				<div id="playoffmade" class="labels"></div></div>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="column" id="words"><p>Team: CAR</p>
+							<p>Turnover Differential: 26</p>
+							<p>Number of interceptions: 24</p>
+							<p>Number of interceptions thrown: 11</p>
+							<p>Number of fumbles lost: 15</p>
+							<p>Number of fumbles recovered: 28</p>
+							<p>Total wins: 15</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+
+						<div class="column" id="details"><div id="buildingName" class="labelHeading"></div> </br>
+							<!--<div id="season" class="labels"></div> </br>-->
+							<div id="height" class="labels"></div> </br>
+							<div id="numberofinterceptions" class="labels"></div> </br>
+							<div id="numberofinterceptionsthrown" class="labels"></div> </br>
+							<div id="numberoffumbleslost" class="labels"></div> </br>
+							<div id="numberoffumblesrecovered" class="labels"></div></br>
+							<div id="playoffmade" class="labels"></div></div>
+					</div>
+					</div>
+
+						<!--<div class="column" id="words"><p>Team: CAR</p>-->
+							<!--<p>Turnover Differential: 26</p>-->
+							<!--<p>Number of interceptions: 24</p>-->
+							<!--<p>Number of interceptions thrown: 11</p>-->
+							<!--<p>Number of fumbles lost: 15</p>-->
+							<!--<p>Number of fumbles recovered: 28</p>-->
+							<!--<p>Total wins: 15</p>-->
+						<!--</div>-->
+
+						<!--<div class="column" id="image"></div>-->
+						<!--<div class="column" id="details"><div id="buildingName" class="labelHeading"></div> </br>-->
+							<!--&lt;!&ndash;<div id="season" class="labels"></div> </br>&ndash;&gt;-->
+							<!--<div id="height" class="labels"></div> </br>-->
+							<!--<div id="numberofinterceptions" class="labels"></div> </br>-->
+							<!--<div id="numberofinterceptionsthrown" class="labels"></div> </br>-->
+							<!--<div id="numberoffumbleslost" class="labels"></div> </br>-->
+							<!--<div id="numberoffumblesrecovered" class="labels"></div></br>-->
+							<!--<div id="playoffmade" class="labels"></div></div>-->
+
+			</div>
 		</div>
+	</div>
+
 
 
 		<div id="info">
 			<div id="instructions">
-				<p>Click on a Team to see more information</p>
+				<h5>Click on a Team to see more information</h5>
 			</div>
 		</div>
 
@@ -231,6 +285,7 @@
 	<script src="js/barchart.js"></script>
 	<script src = "js/tree.js"></script>
 	<script src="js/rushing.js"></script>
+	<script src="js/stackedAreaChart.js"></script>
 	<script src="js/turnover.js"></script>
 	<!--<script src="//d3js.org/d3.v3.min.js"></script>-->
 	<!--<script src="js/slider.js"></script>-->

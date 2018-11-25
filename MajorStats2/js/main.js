@@ -21,71 +21,21 @@ var configs4 = [{key: "Interceptions", title: "Interceptions Thrown"},
     {key: "Picks", title: "Interceptions"}];
 // var configs4 = ["Interceptions","Picks"];
 
+var colorScale = d3.scaleOrdinal(d3.schemeCategory20);
 
-
-
-// Load CSV file
-// function loadData() {
-// 	d3.csv("data/MajorStats1.csv", function(error, data) {
-// // 	    // console.log(csv)
-//
-//
-//         data.forEach(function(d){
-//             // Convert string to 'date object'
-//             d.DefensivePassingYards = +d.DefensivePassingYards;
-//             d.DefensiveRushingYards = +d.DefensiveRushingYards;
-//             d.OffensivePassingYards = +d.OffensivePassingYards;
-//             d.OffensiveRushingYards = +d.OffensiveRushingYards;
-//             d.Interceptions = +d.Interceptions;
-//             d.Picks = +d.Picks;
-//             d.Year = parseDate(d.Year);
-//             d.OffensiveTouchdowns = +d.OffensiveTouchdowns;
-//             d.TouchdownsScoredAgainst = +d.TouchdownsScoredAgainst;
-//             d.wins = +d.wins;
-//
-//             // Convert numeric values to 'numbers'
-//         });
-//         linechart = new LineChart("chart-area", data);
-//         for (var i = 0; i <2; i++) {
-//             bar1 = new BarChart("chart1", data, configs1[i]);
-//             bar2 = new BarChart("chart2", data, configs2[i]);
-//             bar3 = new BarChart("chart3", data, configs3[i]);
-//             bar4 = new BarChart("chart4", data, configs4[i]);
-//             barcharts1.push(bar1)
-//             barcharts2.push(bar2)
-//             barcharts3.push(bar3)
-//             barcharts4.push(bar4)
-//         }
-//
-//     }
-// );
-
-// Show details for a specific FIFA World Cup
-
-
-// create a function that makes the tooltip output visually appealing
-// function tooltipText(str){
-//     var caseFixed = str.substr(0,1) + str.substr(1).toLowerCase();
-//     var parts = caseFixed.split("_");
-//     console.log(parts);
-//     if (parts.length > 1){
-//         var results = "";
-//         for (var i = 0; i < parts.length; i++){
-//             results = results + " " + parts[i];
-//         }
-//         return results;
-//     }
-//     return parts;
-// };
 
 
 d3.queue()
     .defer(d3.csv, "data/MajorStats1.csv")
     .defer(d3.csv, "data/rushing.csv")
     .defer(d3.csv, "data/strongandpoorlyperformingteams.csv")
+    .defer(d3.json, "data/pats.json")
+    .defer(d3.json,"data/nfl_ppg.json")
     .await(loadData);
 
-function loadData(error, data, rushingData, turnOverData, treeData) {
+loadData();
+
+function loadData(error, data, rushingData, turnOverData, data1, data2, treeData) {
 
 
 // 	    // console.log(csv)
@@ -107,6 +57,34 @@ function loadData(error, data, rushingData, turnOverData, treeData) {
         // Convert numeric values to 'numbers'
     });
 
+    //**********STACKED AREA CHART ********//
+
+    pats_allData = data1;
+    console.log(pats_allData)
+
+
+    pats_allData.forEach(function(d){
+        // d.Expenditures = parseFloat(d.Expenditures) * 1.481105 / 100;
+        d.year = parseDate(d.year.toString());
+    });
+    console.log(pats_allData);
+    // Update color scale (all column headers except "Year")
+    // We will use the color scale later for the stacked area chart
+    colorScale.domain(d3.keys(pats_allData[0]).filter(function(d){ return (d !== "year"); }))
+    // console.log(colorScale.domain(d3.keys(allData[0]).filter(function(d){ return d != "year" && d != "team"; })))
+
+    nfl_allData = data2;
+
+
+    nfl_allData.forEach(function(d){
+        // d.Expenditures = parseFloat(d.Expenditures) * 1.481105 / 100;
+        d.year = parseDate(d.year.toString());
+    });
+
+    createVis();
+
+
+
     //******RUSHING BAR CHART******//
 
     //Create rushing bar chart
@@ -121,14 +99,24 @@ function loadData(error, data, rushingData, turnOverData, treeData) {
 
 
 
-}// Margin object with properties for the four directions
-var margin = {top: 20, right: 10, bottom: 40, left: 60};
+}
 
-// SVG Size
+// this is for the stacked area chart
+function createVis() {
 
-var width = 600 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    // TO-DO: Instantiate visualization objects here
+    areachart = new StackedAreaChart("stacked-area-chart", pats_allData, "Patriots: Points per Season");
+    console.log(pats_allData);
+    areachart2 = new StackedAreaChart("stacked-area-chart2", nfl_allData, "Entire NFL: Average Points per Season");
+    // timeline = new Timeline("timeline", allData.years);
 
+}
+
+
+
+
+
+// this is for opponent yards
 
 // Load CSV file
 d3.csv("data/OpponentOffensiveYards.csv", function(data){
@@ -237,8 +225,8 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
         .enter()
         .append("text")
         .text(function(d) {
-            console.log("hi");
-            console.log(d);
+            // console.log("hi");
+            // console.log(d);
             // return d[0] + "," + d[1];
             return d.Team1
         })

@@ -19,7 +19,7 @@ Turnover = function(_parentElement, _data){
 Turnover.prototype.loadData = function() {
     var vis = this;
 
-    console.log(vis.data)
+    // console.log(vis.data)
 
 
     vis.initVis();
@@ -28,6 +28,7 @@ Turnover.prototype.loadData = function() {
 Turnover.prototype.initVis = function() {
     var vis = this
     vis.margin = {top: 30, right: 150, bottom: 30, left: 30};
+    // vis.margin = {top: 0, right: 0, bottom: 0, left: 0};
     vis.width = 960 - vis.margin.left - vis.margin.right;
     vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
@@ -74,7 +75,7 @@ Turnover.prototype.updateVis = function() {
 
     });
 
-    console.log(vis.data);
+    // console.log(vis.data);
 
     totalbuildings = vis.data;
 
@@ -109,7 +110,6 @@ Turnover.prototype.updateVis = function() {
     var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
 
-
     //add bar graph
 
     vis.svg.selectAll(".bar")
@@ -119,16 +119,11 @@ Turnover.prototype.updateVis = function() {
         .attr("class", function (d) { return "bar bar--" + (d.value < 0 ? "negative" : "positive");})
 
         .attr("fill", function(d){
-            if(d.Playoff_Made == "TRUE")
+            if(d.Playoff_Made === "TRUE")
                 return "LightGreen";
             else
                 return "LightPink";
         })
-
-
-
-
-
 
         //.attr("fill", "Plum")
         .attr("x", function(d) { return x(Math.min(0, d.Turnover_Differential)); })
@@ -152,15 +147,14 @@ Turnover.prototype.updateVis = function() {
 
 
         .on("click", function(d){
-            console.log(d);
+            // console.log(d);
             var elt = document.getElementById("instructions");
             console.log('elt:' + elt);
             if (elt != null) {
                 var parent = elt.parentElement;
                 parent.removeChild(elt);
 
-                console.log('parent:' + parent);
-
+                // console.log('parent:' + parent);
             }
 
             $('#buildingName').text('Team: ' + d.Teams);
@@ -170,7 +164,7 @@ Turnover.prototype.updateVis = function() {
             $('#numberofinterceptionsthrown').text('Number of Interceptions Thrown: ' + d.number_of_interceptions_thrown);
             $('#numberoffumbleslost').text('Number of Fumbles Lost: ' + d.number_of_fumbles_lost);
             $('#numberoffumblesrecovered').text('Number of Fumbles Recovered: ' + d.number_of_fumbles_recovered);
-            $('#playoffmade').text('Whether Madre to Playoff: ' + d.Playoff_Made);
+            $('#playoffmade').text('Made Playoffs?: ' + d.Playoff_Made);
 
 
             d3.select("#image")
@@ -252,12 +246,6 @@ Turnover.prototype.updateVis = function() {
         .enter().append("g")
         .attr("class", "legend")
         .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-
-
-
-
-
-
 
 
 
