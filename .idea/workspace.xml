@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e2de11e-ab5b-4b9f-a9cc-50fe6d336147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2/css_1/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2/css_1/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MajorStats2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2/js/turnover.js" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2/js/turnover.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -97,14 +92,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="3" />
-          <entry key="html" value="989" />
+          <entry key="html" value="996" />
           <entry key="js" value="210" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="989" />
+          <entry key="HTML" value="996" />
           <entry key="JavaScript" value="210" />
         </counts>
       </usages-collector>
@@ -125,8 +120,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MajorStats2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+            <state relative-caret-position="164">
+              <caret line="95" column="46" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -335,12 +330,12 @@
       <workItem from="1542582269548" duration="2309000" />
       <workItem from="1542762088212" duration="3024000" />
       <workItem from="1542853860806" duration="3556000" />
-      <workItem from="1543087432386" duration="5847000" />
+      <workItem from="1543087432386" duration="6039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14736000" />
+    <option name="totallyTimeSpent" value="14928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="56" width="1244" height="777" extended-state="0" />
@@ -444,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MajorStats2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="106" column="41" selection-start-line="106" selection-start-column="41" selection-end-line="106" selection-end-column="41" />
+        <state relative-caret-position="164">
+          <caret line="95" column="46" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
