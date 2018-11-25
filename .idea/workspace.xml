@@ -2,8 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e2de11e-ab5b-4b9f-a9cc-50fe6d336147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/.idea/MajorStats1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/.ipynb_checkpoints/MajorStats1-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/MajorStats1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/data/MajorStats1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/data/fifa-world-cup.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/js/d3-tip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/js/d3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/js/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats1/js/slider.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -107,7 +128,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="html" value="1" />
+          <entry key="html" value="2" />
           <entry key="js" value="8" />
           <entry key="json" value="1" />
         </counts>
@@ -115,7 +136,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="2" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="8" />
         </counts>
@@ -124,47 +145,9 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MajorStats2/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="275" column="44" lean-forward="true" selection-start-line="275" selection-start-column="44" selection-end-line="275" selection-end-column="44" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MajorStats2/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MajorStats2/js/turnover.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="157" column="13" lean-forward="true" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MajorStats2/js/tree.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4350">
-              <caret line="290" column="31" selection-start-line="290" selection-start-column="31" selection-end-line="290" selection-end-column="31" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/MajorStats2_new/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -181,8 +164,8 @@
       <find>depth</find>
       <find>Opponent Times Sca</find>
       <find>56.15</find>
-      <find>console</find>
       <find>\/\/ this is for the stacked area chart\nfunction createVis\(\) \{\n\n    \/\/ TO\-DO\: Instantiate visualization objects here\n    areachart \= new StackedAreaChart\(\&quot;stacked\-area\-chart\&quot;\, pats_allData\, \&quot;Patriots\: Points per Season\&quot;\)\;\n    console\.log\(pats_allData\)\;\n    areachart2 \= new StackedAreaChart\(\&quot;stacked\-area\-chart2\&quot;\, nfl_allData\, \&quot;Entire NFL\: Average Points per Season\&quot;\)\;\n    \/\/ timeline \= new Timeline\(\&quot;timeline\&quot;\, allData\.years\)\;\n\n\}\n</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -211,8 +194,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="44" />
-    <option name="y" value="56" />
+    <option name="x" value="132" />
+    <option name="y" value="69" />
     <option name="width" value="1244" />
     <option name="height" value="777" />
   </component>
@@ -232,24 +215,7 @@
             <path>
               <item name="171_final" type="b2602c69:ProjectViewProjectNode" />
               <item name="171_final" type="462c0819:PsiDirectoryNode" />
-              <item name="finalProjectStacked" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="171_final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="171_final" type="462c0819:PsiDirectoryNode" />
-              <item name="finalProjectStacked" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="171_final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="171_final" type="462c0819:PsiDirectoryNode" />
-              <item name="MajorStats2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="171_final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="171_final" type="462c0819:PsiDirectoryNode" />
-              <item name="MajorStats2" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="MajorStats2_new" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -281,7 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (3)">
+  <component name="RunManager" selected="JavaScript Debug.index.html (4)">
     <configuration name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/171_project/MajorStats2/index.html">
       <method v="2" />
     </configuration>
@@ -289,6 +255,9 @@
       <method v="2" />
     </configuration>
     <configuration name="index.html (3)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/171_final/finalProjectStacked/index.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (4)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/171_final/MajorStats2_new/index.html">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/171_project/MajorStats1/index.html">
@@ -299,9 +268,11 @@
       <item itemvalue="JavaScript Debug.index.html (1)" />
       <item itemvalue="JavaScript Debug.index.html (2)" />
       <item itemvalue="JavaScript Debug.index.html (3)" />
+      <item itemvalue="JavaScript Debug.index.html (4)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (4)" />
         <item itemvalue="JavaScript Debug.index.html (3)" />
         <item itemvalue="JavaScript Debug.index.html (2)" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
@@ -322,15 +293,15 @@
       <workItem from="1542582269548" duration="2309000" />
       <workItem from="1542762088212" duration="3024000" />
       <workItem from="1542853860806" duration="3556000" />
-      <workItem from="1543087432386" duration="7867000" />
+      <workItem from="1543087432386" duration="8430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16756000" />
+    <option name="totallyTimeSpent" value="17319000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="56" width="1244" height="777" extended-state="0" />
+    <frame x="132" y="69" width="1244" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19460343" />
@@ -396,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MajorStats2/js/tree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4350">
-          <caret line="290" column="31" selection-start-line="290" selection-start-column="31" selection-end-line="290" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MajorStats2/js/stackedAreaChart.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -422,16 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MajorStats2/js/turnover.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="157" column="13" lean-forward="true" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finalProjectStacked/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
@@ -442,7 +396,7 @@
     <entry file="file://$PROJECT_DIR$/MajorStats2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
-          <caret line="275" column="44" lean-forward="true" selection-start-line="275" selection-start-column="44" selection-end-line="275" selection-end-column="44" />
+          <caret line="275" column="44" selection-start-line="275" selection-start-column="44" selection-end-line="275" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -467,10 +421,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MajorStats2/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="691">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2/js/turnover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="157" column="13" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2/js/tree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4350">
+          <caret line="290" column="31" selection-start-line="290" selection-start-column="31" selection-end-line="290" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2_new/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
