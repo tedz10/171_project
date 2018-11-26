@@ -36,20 +36,19 @@ Turnover.prototype.initVis = function() {
         .attr("width", vis.width + vis.margin.left + vis.margin.right)
         .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
         .append("g")
-    g = vis.svg.append("g").attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
 
-     x = d3.scaleLinear()
+     vis.x = d3.scaleLinear()
         .range([0, vis.width]);
 
-     y = d3.scaleBand()
+     vis.y = d3.scaleBand()
         .rangeRound([vis.height, 0])
         .padding(0.1);
 
 
-     xAxis = d3.axisBottom(x);
+     vis.xAxis = d3.axisBottom(vis.x);
 
-     yAxis = d3.axisLeft(y);
+     vis.yAxis = d3.axisLeft(vis.y);
 
 
 
@@ -96,10 +95,10 @@ Turnover.prototype.updateVis = function() {
 
 
     // update our Scale the range of the data in the domains
-    x.domain(d3.extent(vis.data, function (d) {
+    vis.x.domain(d3.extent(vis.data, function (d) {
         return d.Turnover_Differential;
     }));
-    y.domain(vis.data.map(function (d) {
+    vis.y.domain(vis.data.map(function (d) {
         return d.Teams;
     }));
 
@@ -126,12 +125,12 @@ Turnover.prototype.updateVis = function() {
         })
 
         //.attr("fill", "Plum")
-        .attr("x", function(d) { return x(Math.min(0, d.Turnover_Differential)); })
+        .attr("x", function(d) { return vis.x(Math.min(0, d.Turnover_Differential)); })
 
-        .attr("y", function(d) { return y(d.Teams); })
-        .attr("width", function(d){return Math.abs(x(d.Turnover_Differential) - x(0));})
+        .attr("y", function(d) { return vis.y(d.Teams); })
+        .attr("width", function(d){return Math.abs(vis.x(d.Turnover_Differential) - vis.x(0));})
 
-        .attr("height", function(d,i){return y.bandwidth();})
+        .attr("height", function(d,i){return vis.y.bandwidth();})
         //.attr("class", "barGraph")
 
         .on("mousemove", function(d){
@@ -184,13 +183,13 @@ Turnover.prototype.updateVis = function() {
     // add the x Axis
     vis.svg.append("g")
         .attr("transform", "translate(0," + vis.height + ")")
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(vis.x));
 
 // add the y Axis
     vis.svg.append("g")
         .attr("class", "y axis")
-        .attr("transform", "translate(" + x(0) + ",0)")
-        .call(d3.axisRight(y));
+        .attr("transform", "translate(" + vis.x(0) + ",0)")
+        .call(d3.axisRight(vis.y));
 
     //add pics and the click function
 

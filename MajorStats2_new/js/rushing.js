@@ -31,7 +31,7 @@ Rushing.prototype.loadData = function() {
 Rushing.prototype.initVis = function() {
     var vis = this
     vis.margin = {top: 30, right: 150, bottom: 30, left: 30};
-    vis.width = 960 - vis.margin.left - vis.margin.right;
+    vis.width = 1200 - vis.margin.left - vis.margin.right;
     vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -54,8 +54,20 @@ Rushing.prototype.initVis = function() {
     z = d3.scaleOrdinal()
         .range(["#7b6888",  "#d0743c", ]);
 
+    z2 = d3.scaleOrdinal()
+    //.range(["#95424B",  "#DDA135", ]);
+        .range(["#7b6888",  "#d0743c", ]);
 
 
+    // Add tooltip
+    tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-30, -50])
+        .html(function(d, i) {
+            return "<span id='tipText' style='color:red'></span>";
+        })
+
+    vis.svg.call(tip);
 
     vis.wrangleData();
 };
@@ -70,6 +82,9 @@ Rushing.prototype.wrangleData = function() {
     })
 
     vis.updateVis()
+
+    vis.makeAFCTable()
+    vis.makeNFCTable()
 
 }
 
@@ -87,6 +102,8 @@ Rushing.prototype.reSort = function(orderingType) {
     vis.svg.selectAll('.meanText').remove();
 
     vis.updateVis()
+
+
 
 }
 
@@ -119,41 +136,165 @@ Rushing.prototype.filterVis = function(filteringType) {
 
 }
 
+Rushing.prototype.makeNFCTable = function() {
+    var vis = this;
+
+    nfc = vis.dataOrig.filter(function (d) {
+        return (d.Conference == "NFC");
+
+    });
+
+
+
+
+    var sortInfo = { key: "id", order: d3.descending };
+
+    var table = d3.select("#nfcTable").insert("table",":first-child").attr("id","NameList");
+    var thead = table.append("thead");
+    var tbody = table.append("tbody");
+
+    thead.append("tr")
+        .selectAll("th")
+        .data(d3.entries(nfc[0]))
+        .enter()
+        .append("th")
+        .on("click", function(d,i){createTableBody(d.key);})
+        .text(function(d){return d.key;})
+    ;
+    createTableBody("id");
+
+    function createTableBody(sortKey)
+    {
+        if (sortInfo.order.toString() == d3.ascending.toString())
+        { sortInfo.order = d3.descending; }
+        else { sortInfo.order = d3.ascending; }
+        nfc.sort(function(x,y){return sortInfo.order(x[sortKey], y[sortKey])});
+        tbody
+            .selectAll("tr")
+            .data(nfc)
+            .enter()
+            .append("tr")
+            .selectAll("td")
+            .data(function(d){
+                return d3.entries(d)
+            })
+            .enter()
+            .append("td")
+            .text(function(d){return d.Team;})
+        ;
+        tbody
+            .selectAll("tr")
+            .data(nfc)
+            .attr('id', function(d){
+                return d.Team
+            })
+            .selectAll("td")
+            .data(function(d){return d3.entries(d)})
+            .text(function(d, i){
+
+                if( d.value == "Seattle Seahawks"){
+                    return d.value;
+                }else{
+                    return d.value;
+                }
+
+
+            })
+        ;
+    }
+
+
+
+}
+
+Rushing.prototype.makeAFCTable = function() {
+    var vis = this;
+
+
+    afc = vis.dataOrig.filter(function (d) {
+        return (d.Conference == "AFC");
+
+    });
+
+
+    var sortInfo = { key: "id", order: d3.descending };
+
+    var table = d3.select("#afcTable").insert("table",":first-child").attr("id","NameList");
+    var thead = table.append("thead");
+    var tbody = table.append("tbody");
+
+    thead.append("tr")
+        .selectAll("th")
+        .data(d3.entries(afc[0]))
+        .enter()
+        .append("th")
+        .on("click", function(d,i){createTableBody(d.key);})
+        .text(function(d){return d.key;})
+    ;
+    createTableBody("id");
+
+    function createTableBody(sortKey)
+    {
+        if (sortInfo.order.toString() == d3.ascending.toString())
+        { sortInfo.order = d3.descending; }
+        else { sortInfo.order = d3.ascending; }
+        afc.sort(function(x,y){return sortInfo.order(x[sortKey], y[sortKey])});
+        tbody
+            .selectAll("tr")
+            .data(afc)
+            .enter()
+            .append("tr")
+            .attr('id', function(d){
+                return d.Team
+            })
+            .selectAll("td")
+            .data(function(d){return d3.entries(d)})
+            .enter()
+            .append("td")
+            .text(function(d){return d.value;})
+        ;
+        // 更新する
+        tbody
+            .selectAll("tr")
+            .data(afc)
+            .selectAll("td")
+            .data(function(d){return d3.entries(d)})
+            .text(function(d){return d.value;})
+        ;
+    }
+
+
+
+}
 
 Rushing.prototype.updateVis = function(){
     var vis = this;
 
 
 
-    var columns = ["Rushing", "Passing", "City", "Playoffs"]
-    var keys = columns.slice(0);
-    console.log(keys)
+    var columns = ["Rushing", "Passing", "City", "Playoffs", "WL"]
+    var leg = ["Rushing", "Passing"]
+    var keys = columns;
 
     x0.domain(vis.data.map(function(d) { return d.Team; }));
     x1.domain(keys).rangeRound([0, x0.bandwidth()]);
     y.domain([0, d3.max(vis.data, function(d) { return d3.max(keys, function(key) { return d[key]; }); })]).nice();
 
 
-    // Add tooltip
-    var tip = d3.tip()
-        .attr('class', 'd3-tip')
-        .offset([-30, -50])
-        .html(function(d, i) {
-            return "<span id='tipText' style='color:red'></span>";
-        })
 
-    vis.svg.call(tip);
 
 
     vis.svg.append('pattern')
         .attr('id', 'diagonalHatch')
         .attr('patternUnits', 'userSpaceOnUse')
-        .attr('width', 4)
+        .attr("width", x1.bandwidth())
         .attr('height', 4)
         .append('path')
         .attr('d', 'M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2')
         .attr('stroke', '#000000')
-        .attr('stroke-width', 1);
+        .attr('stroke-width', 2);
+
+    vis.svg.append("pattern")
 
 
     group = g.append("g")
@@ -165,62 +306,104 @@ Rushing.prototype.updateVis = function(){
         .data(function(d) {
             return keys.map(
                 function(key) {
-                    // console.log(d.City)
                     return {city: d.City, key: key, value: d[key], playoffs: d.Playoffs};
                 });
         })
         .enter().append("rect")
-        .attr("x", function(d) { return x1(d.key); })
+        .attr("x", function(d) { return (x1(d.key)) *2.9; })
         .attr("class", 'bar')
         .attr("y", function(d) { return y(d.value); })
-        .attr("width", x1.bandwidth())
+        .attr("width", x1.bandwidth()*2.9)
         .attr("height", function(d) { return vis.height - y(d.value); })
         .attr('fill', function(d) {
+            if(d.playoffs == "TRUE"){
+                return 'url(#diagonalHatch)'
 
-            if(d.Playoffs == "TRUE"){
-                return 'url(#diagonalHatch)';
             }
-        })
-        .style("opacity", function(d) {
-            return 0.8
-        })
-
-
-    group = g.append("g")
-        .selectAll("g")
-        .data(vis.data)
-        .enter().append("g")
-        .attr("transform", function(d) { return "translate(" + x0(d.Team) + ",0)"; })
-        .selectAll("rect")
-        .data(function(d) {
-            return keys.map(
-                function(key) {
-                    // console.log(d.City)
-                    return {city: d.City, key: key, value: d[key], playoffs: d.Playoffs};
-                });
-        })
-        .enter().append("rect")
-        .attr("x", function(d) { return x1(d.key); })
-        .attr("class", 'bar')
-        .attr("y", function(d) { return y(d.value); })
-        .attr("width", x1.bandwidth())
-        .attr("height", function(d) { return vis.height - y(d.value); })
-        .attr("fill", function(d) { return z(d.key); })
-        .style("opacity", function(d) {
-            return 0.8
-        })
-        .on("mouseover", function(d) {
-            console.log(d.city)
+            if(d.playoffs == "FALSE"){
+                return 'none'
+            }
+        }).on("mouseover", function(d) {
             tip.show()
-            $("#tipText").html(d.city + "<br/>" + d.key + ": " + d.value);
-            d3.select(this)
-                .style("opacity", 1)
+            $("#tipText").html(d.city + "<br/>" + d.key + ": " + d.value + "W-L:%" + d["WL"]);
+            //d3.select(this).style("opacity", 1)
 
         })
         .on("mouseout", function(d) {
             tip.hide()
-            d3.select(this)
-                .style("opacity", 0.8)
+            // d3.select(this).style("opacity", 0.8)
+
+        })
+
+
+
+    group = g.append("g")
+        .selectAll("g")
+        .data(vis.data)
+        .enter().append("g")
+        .attr("transform", function(d) { return "translate(" + x0(d.Team) + ",0)"; })
+        .selectAll("rect")
+        .data(function(d) {
+            return keys.map(
+                function(key) {
+                    return {city: d.City, key: key, value: d[key], playoffs: d.Playoffs, wl: d.WL};
+                });
+        })
+        .enter().append("rect")
+        .attr("x", function(d) { return (x1(d.key)) *2.9; })
+        .attr("class", 'bar')
+        .attr("y", function(d) { return y(d.value); })
+        .attr("width", x1.bandwidth()*2.9)
+        .attr("height", function(d) { return vis.height - y(d.value); })
+        .attr("fill", function(d) {
+
+                if(d.city=="Seattle Seahawks"){
+                    return z2(d.key);
+
+                }else{
+                    return z(d.key); }
+
+            }
+
+        )
+        .attr("stroke", function(d) {
+
+                if(d.city=="Seattle Seahawks"){
+                    return "#E82C0C";
+
+                }else{
+                    return "black"
+                }
+
+            }
+
+        )
+        .attr("stroke-width", function(d) {
+
+                if(d.city=="Seattle Seahawks"){
+                    return 3;
+
+                }else{
+                    return 1 }
+
+            }
+
+        )
+
+
+
+        .style("opacity", 0.8)
+        .on("mouseover", function(d) {
+            console.log(d)
+
+            tip.show()
+            $("#tipText").html(d.city + "<br/>" + d.key + ": " + d.value + "<br/>W-L:%: " + d.wl);
+            //d3.select(this).style("opacity", 1)
+
+        })
+        .on("mouseout", function(d) {
+            tip.hide()
+            //d3.select(this).style("opacity", 0.8)
 
         })
 
@@ -242,7 +425,7 @@ Rushing.prototype.updateVis = function(){
                 return (i * (vis.width / vis.data.length + 2));
             }
             else{
-                return (i * (vis.width / vis.data.length + 1));
+                return (i * (vis.width / vis.data.length + 1.5));
 
             }
         })
@@ -267,7 +450,7 @@ Rushing.prototype.updateVis = function(){
                 return (i * (vis.width / vis.data.length + 2));
             }
             else{
-                return (i * (vis.width / vis.data.length + 1));
+                return (i * (vis.width / vis.data.length + 1.5));
 
             }
         })
@@ -283,14 +466,14 @@ Rushing.prototype.updateVis = function(){
 
     // Add the text for the mean lines
     g.append("text")
-        .attr("x", vis.width )
+        .attr("x", vis.width + 20 )
         .attr("y", y(rushingAverage))
         .attr("dy", "0.32em")
         .attr("class", "meanText")
         .text("Mean rushing yards");
 
     g.append("text")
-        .attr("x", vis.width )
+        .attr("x", vis.width + 20)
         .attr("y", y(passingAverage))
         .attr("dy", "0.32em")
         .attr("class", "meanText")
@@ -320,9 +503,9 @@ Rushing.prototype.updateVis = function(){
         .attr("font-size", 10)
         .attr("text-anchor", "end")
         .selectAll("g")
-        .data(keys.slice(0))
+        .data(leg.slice(0))
         .enter().append("g")
-        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+        .attr("transform", function(d, i) { return "translate(20," + -i * 20 + ")"; });
 
     legend.append("rect")
         .attr("x", vis.width - 19)
@@ -336,18 +519,30 @@ Rushing.prototype.updateVis = function(){
         .attr("dy", "0.32em")
         .text(function(d) { return d; });
 
-    legend.append("rect")
-        .attr("x", vis.width - 19)
+
+
+    var pat = g.append("rect")
+        .attr("x", vis.width)
+        .attr("y", 30)
         .attr("width", 19)
         .attr("height", 19)
-        .attr("fill", z);
+        .attr("fill", 'url(#diagonalHatch)');
 
-    legend.append("text")
-        .attr("x", vis.width - 24)
-        .attr("y", 9.5)
+
+
+
+    vis.svg.append("text")
+        .attr("font-family", "sans-serif")
+        .attr("font-size", 10)
+        .attr("text-anchor", "end")
+        .attr("x", vis.width + 27)
+        .attr("y", 70)
         .attr("dy", "0.32em")
-        .text(function(d) { return d; });
+        .text("Made Playoffs");
+
 
 
 
 }
+
+

@@ -81,7 +81,7 @@ function loadData(error, data, rushingData, turnOverData, data1, data2, treeData
         d.year = parseDate(d.year.toString());
     });
 
-    createVis();
+
 
 
 
@@ -97,7 +97,7 @@ function loadData(error, data, rushingData, turnOverData, data1, data2, treeData
     turnoverBar = new Turnover("turnoverChart", turnOverData);
     console.log("turnoverbar end");
 
-
+    createVis();
 
 }
 
@@ -111,14 +111,6 @@ function createVis() {
     // timeline = new Timeline("timeline", allData.years);
 
 }
-
-
-
-
-
-// this is for opponent yards
-
-
 
 var margin2 = {top: 140, right: 60, bottom: 30, left: 60},
     width2 = 800 - margin2.left - margin2.right,
@@ -332,3 +324,8 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
         .style("text-anchor", "end")
         .text("total wins from 2015");
 });
+
+
+
+
+

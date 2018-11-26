@@ -1,78 +1,81 @@
 // to do
 
+// add tool tip
+// fix text layout
+
 var treeData =
-    {"name": "Points Per Game: ≤ 23.85", "gini":0.46, "samples":256, "value":[164,92], "color":"LightGreen",
+    {"name": "Points Per Game: ≤ 23.85", "gini":0.46, "samples":256, "value":[164,92], "color":"LightPink",
 
         "children":
-            [{"name": "Turnover Differential ≤ 3.5", "gini":0.444, "samples":93, "value":[31,62], "color":"LightGreen",
-                "children":[{"name": "Rushing Yards ≤1400.5", "gini":0.262, "samples":58, "value":[9,49], "color":"LightGreen",
+            [{"name": "Turnover Differential ≤ 3.5", "gini":0.444, "samples":93, "value":[31,62], "color":"LightPink",
+                "children":[{"name": "Rushing Yards ≤1400.5", "gini":0.262, "samples":58, "value":[9,49], "color":"LightPink",
 
-                    "children":[{"name": "Opponent Offensive Yards ≤ 6112.0", "gini":0.219, "samples":56, "value":[7,49], "color":"LightGreen",
+                    "children":[{"name": "Opponent Offensive Yards ≤ 6112.0", "gini":0.219, "samples":56, "value":[7,49], "color":"LightPink",
 
-                        "children":[{"name":"Offensive Yards per Play≤ 6.15","gini":0.49, "samples":7, "value":[4,3], "color":"LightGreen",
+                        "children":[{"name":"Offensive Yards per Play≤ 6.15","gini":0.49, "samples":7, "value":[4,3], "color":"LightPink",
 
-                            "children":[{"gini":0.0, "samples":3, "value":[0,3],"color":"LightGreen"},
-                                {"gini":0.0, "samples":4, "value":[4,0],"color":"LightPink"}]
+                            "children":[{"gini":0.0, "samples":3, "value":[0,3],"color":"LightPink"},
+                                {"gini":0.0, "samples":4, "value":[4,0],"color":"LightGreen"}]
                         },
 
-                            {"name":"Offensive Yards per Play≤ 4.8", "gini":0.115, "samples":49, "value":[3,46], "color":"LightPink",
+                            {"name":"Offensive Yards per Play≤ 4.8", "gini":0.115, "samples":49, "value":[3,46], "color":"LightGreen",
 
-                                "children":[{"name":"Opponent Red Zone Percentage ≤ 35.55", "gini":0.08, "samples":48, "value":[2,46],"color":"LightGreen",
+                                "children":[{"name":"Opponent Red Zone Percentage ≤ 35.55", "gini":0.08, "samples":48, "value":[2,46],"color":"LightPink",
 
                                     "children":[{
                                         // "name":"Passing Yards_x ≤ 3136.0",
-                                        "gini":0.042, "samples":47, "value":[1,46],"color":"LightGreen",
+                                        "gini":0.042, "samples":47, "value":[1,46],"color":"LightPink",
 
-                                        // "children":[{"gini":0.0, "samples":44, "values":[0,44], "color":"LightGreen"},
-                                        //     {"name":"Passing Yards_x ≤ 3033.5", "gini":0.444, "samples":3, "value":[1,2], "color":"LightPink",
+                                        // "children":[{"gini":0.0, "samples":44, "values":[0,44], "color":"LightPink"},
+                                        //     {"name":"Passing Yards_x ≤ 3033.5", "gini":0.444, "samples":3, "value":[1,2], "color":"LightGreen",
                                         //
-                                        //         "children":[{"gini":0.0, "samples":1, "value":[1,0],"color":"LightGreen"},
-                                        //             {"gini":0.0, "samples":2, "value":[0,2], "color":"LightPink"}]
+                                        //         "children":[{"gini":0.0, "samples":1, "value":[1,0],"color":"LightPink"},
+                                        //             {"gini":0.0, "samples":2, "value":[0,2], "color":"LightGreen"}]
                                         //
                                         //     }]
 
                                     },
 
-                                        {"gini":0.0, "samples":1, "value":[1,0],"color":"LightPink"}]
+                                        {"gini":0.0, "samples":1, "value":[1,0],"color":"LightGreen"}]
                                 },
 
-                                    {"gini":0.0, "samples":1, "value":[1,0],"color":"LightPink"}]
+                                    {"gini":0.0, "samples":1, "value":[1,0],"color":"LightGreen"}]
                             }]
 
                     },
-                        {"gini":0.0, "samples":2, "value":[2,0], "color":"LightPink"}]
+                        {"gini":0.0, "samples":2, "value":[2,0], "color":"LightGreen"}]
                 },
 
-                    {"name": "Opponent Offensive Yards ≤ 5981.0", "gini":0.467, "samples":35, "color":"LightPink",
-                        "children":[{"gini":0.0, "samples":11, "value":[11,0], "color":"LightGreen"},
+                    {"name": "Opponent Offensive Yards ≤ 5981.0", "gini":0.467, "samples":35, "color":"LightGreen",
+                        "children":[{"gini":0.0, "samples":11, "value":[11,0], "color":"LightPink"},
 
-                            {"name": "Opponent Offensive Yards ≤ 5641.0", "gini":0.497, "samples":24, "value":[11,13], "color":"LightPink",
+                            {"name": "Opponent Offensive Yards ≤ 5641.0", "gini":0.497, "samples":24, "value":[11,13], "color":"LightGreen",
 
-                                "children":[{"gini":0.0, "samples":6, "value":[0,6],"color":"LightGreen"},
-                                    {"name":"Times Sacked_x ≤ 30.0", "gini":0.475, "sample":18, "value":[11,7], "color":"LightPink",
+                                "children":[{"gini":0.0, "samples":6, "value":[0,6],"color":"LightPink"},
+                                    {"name":"Times Sacked_x ≤ 30.0", "gini":0.475, "sample":18, "value":[11,7], "color":"LightGreen",
 
-                                        "children":[{"name":"Passing Yards_x ≤ 4718.5", "gini":0.198, "samples":9, "value":[8,1], "color":"LightGreen",
+                                        "children":[{"name":"Passing Yards_x ≤ 4718.5", "gini":0.198, "samples":9, "value":[8,1], "color":"LightPink",
 
-                                            "children":[{"gini":0.0, "samples":1, "value":[0,1],"color":"LightGreen"},
+                                            "children":[{"gini":0.0, "samples":1, "value":[0,1],"color":"LightPink"},
 
-                                                {"gini":0.0, "samples":8,"value":[8,0],"color":"LightPink"}]
+                                                {"gini":0.0, "samples":8,"value":[8,0],"color":"LightGreen"}]
                                         },
 
 
 
-                                            {"name":"Penalty Yards ≤ 791.0", "gini":0.444, "samples":9, "value":[3,6], "color":"LightPink",
+                                            {"name":"Penalty Yards ≤ 791.0", "gini":0.444, "samples":9, "value":[3,6], "color":"LightGreen",
 
-                                                "children":[{"name":"Turnover Differential ≤ -9.0", "gini":0.245, "samples":7, "value":[1,6], "color":"LightGreen",
+                                                "children":[{"name":"Turnover Differential ≤ -9.0", "gini":0.245, "samples":7, "value":[1,6], "color":"LightPink",
 
 
-                                                    "children":[{"gini":0.0, "samples":6, "value":[0,6], "color":"LightGreen"},
+                                                    "children":[{"gini":0.0, "samples":6, "value":[0,6], "color":"LightPink"},
 
-                                                        {"gini":0.0, "samples":1, "value":[1,0],"color":"LightPink"}]
+                                                        {"gini":0.0, "samples":1, "value":[1,0],"color":"LightGreen"}]
 
                                                 },
 
 
-                                                    {"gini":0.0, "samples":2, "value":[2,0],"color":"LightPink"}]
+                                                    {"gini":0.0, "samples":2, "value":[2,0],"color":"LightGreen"}]
 
 
                                             }]
@@ -90,47 +93,47 @@ var treeData =
 
             },
 
-                {"name": "Opponent Offensive Yards ≤ 4696", "gini":0.3, "samples":163, "value":[133, 30], "color":"LightPink",
+                {"name": "Opponent Offensive Yards ≤ 4696", "gini":0.3, "samples":163, "value":[133, 30], "color":"LightGreen",
 
-                    "children":[{"name": "Rushing Yards ≤2529.5", "gini":0.223, "samples":149, "value":[130, 19],"color":"LightGreen",
+                    "children":[{"name": "Rushing Yards ≤2529.5", "gini":0.223, "samples":149, "value":[130, 19],"color":"LightPink",
 
-                        "children":[{"gini":0.0, "samples":3, "value":[0,3], "color":"LightGreen"},
+                        "children":[{"gini":0.0, "samples":3, "value":[0,3], "color":"LightPink"},
 
-                            {"name": "Turnover Differential ≤ -2.5","gini":0.195, "samples":146, "value":[130,16], "color":"LightPink",
+                            {"name": "Turnover Differential ≤ -2.5","gini":0.195, "samples":146, "value":[130,16], "color":"LightGreen",
 
-                                "children":[{"name":"Rushing Yards_x ≤ 1425.0", "gini":0.32, "samples":65, "value":[52,13], "color":"LightGreen",
+                                "children":[{"name":"Rushing Yards_x ≤ 1425.0", "gini":0.32, "samples":65, "value":[52,13], "color":"LightPink",
 
                                     "children":[{
                                         // "name":"Opponent Times Sacked_x ≤ 20.5",
-                                        "gini":0.278, "samples":60, "value":[50,10], "color":"LightGreen",
+                                        "gini":0.278, "samples":60, "value":[50,10], "color":"LightPink",
 
                                         // "children":[{
                                         // "name":"Opponent Red Zone Percentage ≤ 56.15",
-                                        //     "gini":0.259, "samples":59, "value":[50,9], "color":"LightGreen",
+                                        //     "gini":0.259, "samples":59, "value":[50,9], "color":"LightPink",
 
 
-                                        // "children":[{"name":"Opponent Times Sacked_x ≤ 39.0", "gini":0.444, "samples":15, "value":[10,5], "color":"LightGreen",
+                                        // "children":[{"name":"Opponent Times Sacked_x ≤ 39.0", "gini":0.444, "samples":15, "value":[10,5], "color":"LightPink",
                                         //
-                                        //     "children":[{"name":"Penalty Yards ≤ 994.0", "gini":0.32, "samples":5, "value":[1,4], "color":"LightGreen",
+                                        //     "children":[{"name":"Penalty Yards ≤ 994.0", "gini":0.32, "samples":5, "value":[1,4], "color":"LightPink",
                                         //
-                                        //         "children":[{"gini":0.0, "samples":1, "value":[1,0], "color":"LightGreen"},
-                                        //             {"gini":0.0, "samples":4, "value":[0,4], "color":"LightPink"}]
+                                        //         "children":[{"gini":0.0, "samples":1, "value":[1,0], "color":"LightPink"},
+                                        //             {"gini":0.0, "samples":4, "value":[0,4], "color":"LightGreen"}]
                                         //
                                         //     },
                                         //
                                         //
                                         //         {"name":"" +
-                                        //                 "er Play ≤ 5.75", "gini":0.18, "samples":10, "value":[9,1], "color":"LightPink",
+                                        //                 "er Play ≤ 5.75", "gini":0.18, "samples":10, "value":[9,1], "color":"LightGreen",
                                         //
-                                        //             "children":[{"name":"Penalty Yards ≤ 990.5", "gini":0.5, "samples":2, "value":[1,1], "color":"LightGreen",
+                                        //             "children":[{"name":"Penalty Yards ≤ 990.5", "gini":0.5, "samples":2, "value":[1,1], "color":"LightPink",
                                         //
-                                        //                 "children":[{"gini":0.0, "samples":1, "value":[0,1], "color":"LightGreen"},
-                                        //                     {"gini":0.0, "samples":1, "value":[1,0], "color":"LightPink"}]
+                                        //                 "children":[{"gini":0.0, "samples":1, "value":[0,1], "color":"LightPink"},
+                                        //                     {"gini":0.0, "samples":1, "value":[1,0], "color":"LightGreen"}]
                                         //
                                         //
                                         //             },
                                         //
-                                        //                 {"gini":"0.0", "samples":8, "value":[8,0], "color":"LightPink"}]
+                                        //                 {"gini":"0.0", "samples":8, "value":[8,0], "color":"LightGreen"}]
                                         //
                                         //
                                         //         }]
@@ -139,37 +142,37 @@ var treeData =
                                         // },
                                         //
                                         //
-                                        //     {"name": "Passing Yards_x ≤ 3046.0","gini":"0.165", "samples":44, "value":[40,4], "color":"LightPink",
+                                        //     {"name": "Passing Yards_x ≤ 3046.0","gini":"0.165", "samples":44, "value":[40,4], "color":"LightGreen",
                                         //
                                         //
-                                        //         "children":[{"name":"Thrid Down Percentage ≤ 44.05","gini":"0.059", "samples":33, "value":[32,1], "color":"LightGreen",
+                                        //         "children":[{"name":"Thrid Down Percentage ≤ 44.05","gini":"0.059", "samples":33, "value":[32,1], "color":"LightPink",
                                         //
                                         //
-                                        //             "children":[{"name":"Turnover Differential ≤ -1.0","gini":"0.5", "samples":2, "value":[1,1], "color":"LightGreen",
+                                        //             "children":[{"name":"Turnover Differential ≤ -1.0","gini":"0.5", "samples":2, "value":[1,1], "color":"LightPink",
                                         //
-                                        //                 "children":[{"gini":0.0, "samples":1, "value":[1,0],"color":"LightGreen"},
-                                        //                     {"gini":0.0, "samples":1, "value":[0,1],"color":"LightPink"}]
+                                        //                 "children":[{"gini":0.0, "samples":1, "value":[1,0],"color":"LightPink"},
+                                        //                     {"gini":0.0, "samples":1, "value":[0,1],"color":"LightGreen"}]
                                         //             },
                                         //
                                         //
                                         //
-                                        //                 {"gini":0.0, "samples":31, "value":[31,0],"color":"LightPink"}]
+                                        //                 {"gini":0.0, "samples":31, "value":[31,0],"color":"LightGreen"}]
                                         //
                                         //
                                         //
                                         //         },
                                         //
                                         //
-                                        //             {"name":"Rushing Yards_x ≤ 2016.5","gini":"0.397", "samples":11, "value":[8,3], "color":"LightPink",
+                                        //             {"name":"Rushing Yards_x ≤ 2016.5","gini":"0.397", "samples":11, "value":[8,3], "color":"LightGreen",
                                         //
-                                        //                 "children":[{"gini":0.0, "samples":2, "value":[0,2],"color":"LightGreen"},
+                                        //                 "children":[{"gini":0.0, "samples":2, "value":[0,2],"color":"LightPink"},
                                         //
                                         //
-                                        //                     {"name":"Passing Yards_x ≤ 3013.0", "gini":0.198, "samples":9, "value":[8,1], "color":"LightPink",
+                                        //                     {"name":"Passing Yards_x ≤ 3013.0", "gini":0.198, "samples":9, "value":[8,1], "color":"LightGreen",
                                         //
-                                        //                         // "children":[{"gini":0.0, "samples":1, "value":[0,1],"color":"LightGreen"},
+                                        //                         // "children":[{"gini":0.0, "samples":1, "value":[0,1],"color":"LightPink"},
                                         //
-                                        //                             // {"gini":0.0, "samples":8, "value":[8,0],"color":"LightPink"}]
+                                        //                             // {"gini":0.0, "samples":8, "value":[8,0],"color":"LightGreen"}]
                                         //
                                         //
                                         //                     }]
@@ -183,48 +186,48 @@ var treeData =
 
                                         // },
                                         //
-                                        //     {"gini":0.0, "samples":1, "value":[0,1], "color":"LightPink"}]
+                                        //     {"gini":0.0, "samples":1, "value":[0,1], "color":"LightGreen"}]
 
 
                                     },
 
-                                        {"name":"Offensive Yards Per Play ≤ 5.1","gini":"0.48", "samples":5, "value":[2,3], "color":"LightPink",
-                                            "children":[{"gini":0.0, "samples":3, "value":[0,3],"color":"LightGreen"},
-                                                {"gini":0.0, "samples":2, "value":[2,0],"color":"LightPink"}]
+                                        {"name":"Offensive Yards Per Play ≤ 5.1","gini":"0.48", "samples":5, "value":[2,3], "color":"LightGreen",
+                                            "children":[{"gini":0.0, "samples":3, "value":[0,3],"color":"LightPink"},
+                                                {"gini":0.0, "samples":2, "value":[2,0],"color":"LightGreen"}]
 
                                         }]
 
 
                                 },
 
-                                    {"name":"Opponent Red Zone Percentage ≤ 50.95", "gini":0.071, "samples":81, "value":[78,3],"color":"LightPink",
+                                    {"name":"Opponent Red Zone Percentage ≤ 50.95", "gini":0.071, "samples":81, "value":[78,3],"color":"LightGreen",
 
 
 
-                                        "children":[{"gini":0.0, "samples":60, "value":[60,0],"color":"LightGreen"},
+                                        "children":[{"gini":0.0, "samples":60, "value":[60,0],"color":"LightPink"},
 
 
-                                            {"name":"Opponent Offensive Yards ≤ 5268.0", "gini":0.245, "samples":21, "value":[18,3],"color":"LightPink",
+                                            {"name":"Opponent Offensive Yards ≤ 5268.0", "gini":0.245, "samples":21, "value":[18,3],"color":"LightGreen",
 
-                                                "children":[{"name":"Third Down Percentage ≤ 42.4", "gini":0.18, "samples":20, "value":[18,2],"color":"LightGreen",
+                                                "children":[{"name":"Third Down Percentage ≤ 42.4", "gini":0.18, "samples":20, "value":[18,2],"color":"LightPink",
 
 
-                                                    "children":[{"gini":0.0, "samples":1, "value":[0,1],"color":"LightGreen"},
+                                                    "children":[{"gini":0.0, "samples":1, "value":[0,1],"color":"LightPink"},
 
 
                                                         {
                                                             // "name":"Times Sacked_x ≤ 36.0",
-                                                            "gini":0.1, "samples":19, "value":[18,1],"color":"LightPink",
+                                                            "gini":0.1, "samples":19, "value":[18,1],"color":"LightGreen",
 
 
-                                                            // "children":[{"gini":0.0, "samples":15, "value":[15,0],"color":"LightGreen"},
+                                                            // "children":[{"gini":0.0, "samples":15, "value":[15,0],"color":"LightPink"},
                                                             //
-                                                            //     {"name":"Time Sacked_x ≤ 31.5", "gini":0.375, "samples":4, "value":[3,1],"color":"LightPink",
+                                                            //     {"name":"Time Sacked_x ≤ 31.5", "gini":0.375, "samples":4, "value":[3,1],"color":"LightGreen",
                                                             //
                                                             //
-                                                            //         "children":[{"gini":0.0, "samples":1, "value":[0,1],"color":"LightGreen"},
+                                                            //         "children":[{"gini":0.0, "samples":1, "value":[0,1],"color":"LightPink"},
                                                             //
-                                                            //             {"gini":0.0, "samples":3, "value":[3,0],"color":"LightPink"}]
+                                                            //             {"gini":0.0, "samples":3, "value":[3,0],"color":"LightGreen"}]
                                                             //
                                                             //     }]
 
@@ -232,7 +235,7 @@ var treeData =
                                                         }]
 
                                                 },
-                                                    {"gini":0.0, "samples":1, "value":[0,1],"color":"LightPink"}]
+                                                    {"gini":0.0, "samples":1, "value":[0,1],"color":"LightGreen"}]
 
                                             }]
 
@@ -243,15 +246,15 @@ var treeData =
                         ]
                     },
 
-                        {"name": "Turnover Differential ≤ -8.5", "gini":0.337, "samples":14, "value":[3,11],"color":"LightPink",
+                        {"name": "Turnover Differential ≤ -8.5", "gini":0.337, "samples":14, "value":[3,11],"color":"LightGreen",
 
-                            "children":[{"gini":0.0, "samples":10, "value":[0,10],"color":"LightGreen"},
+                            "children":[{"gini":0.0, "samples":10, "value":[0,10],"color":"LightPink"},
 
-                                {"name":"Opponent Offensive Yards ≤ 4380.5", "gini":0.375, "samples":4, "value":[3,1],"color":"LightPink",
+                                {"name":"Opponent Offensive Yards ≤ 4380.5", "gini":0.375, "samples":4, "value":[3,1],"color":"LightGreen",
 
-                                    "children":[{"gini":0.0, "samples":3, "value":[3,0],"color":"LightGreen"},
+                                    "children":[{"gini":0.0, "samples":3, "value":[3,0],"color":"LightPink"},
 
-                                        {"gini":0.0, "samples":1, "value":[0,1],"color":"LightPink"}]
+                                        {"gini":0.0, "samples":1, "value":[0,1],"color":"LightGreen"}]
 
                                 }]
 
@@ -265,9 +268,6 @@ var treeData =
 
     };
 
-// add tool tip
-// fix text layout
-
 
 
 
@@ -277,7 +277,7 @@ var treeData =
 
 
 // Set the dimensions and margins of the diagram
-var margin = {top: 50, right: 90, bottom: 30, left: 150},
+var margin = {top: 20, right: 90, bottom: 30, left: 150},
     width = 960 - margin.left - margin.right,
     height = 800 - margin.top - margin.bottom;
 
@@ -291,14 +291,12 @@ var svg = d3.select("#tree").append("svg")
     .attr("transform", "translate("
         + margin.left + "," + margin.top + ")");
 
-var smudge = 50;
-var smudge2 = 20;
 // create legend
 svg
     .append("text")
     // .attr("class", "treeLegend")
     .attr("x", 0)
-    .attr("y", 0 - smudge2)
+    .attr("y", 0)
     .attr("class", "treeLegendLabel")
     .text("Legend")
     .style("font-weight", "bold")
@@ -307,7 +305,7 @@ svg
     .append("rect")
     // .attr("class", "treeLegend")
     .attr("x", 0)
-    .attr("y", 20 - smudge2)
+    .attr("y", 20)
     .attr("fill", "LightPink")
     .attr("width", 20)
     .attr("height", 20);
@@ -316,7 +314,7 @@ svg
     .append("text")
     // .attr("class", "treeLegend")
     .attr("x", 30)
-    .attr("y", 35 - smudge2)
+    .attr("y", 35)
     .text("Majority of teams in node missed playoffs")
 
 
@@ -325,7 +323,7 @@ svg
     .append("rect")
     // .attr("class", "treeLegend")
     .attr("x", 0)
-    .attr("y", 50 - smudge2)
+    .attr("y", 50)
     .attr("fill", "LightGreen")
     .attr("width", 20)
     .attr("height", 20);
@@ -334,14 +332,14 @@ svg
     .append("text")
     // .attr("class", "treeLegend")
     .attr("x", 30)
-    .attr("y", 65 - smudge2)
+    .attr("y", 65)
     .text("Majority of teams in node made playoffs")
 
 svg
     .append("text")
     // .attr("class", "treeLegend")
     .attr("x", 0)
-    .attr("y", 90 - smudge2)
+    .attr("y", 100)
     .text("[x, y]: x teams in node did not make playoffs, y teams made playoffs")
     // .attr("fill", "LightGreen")
     // .attr("width", 20)
@@ -350,10 +348,10 @@ svg
 
 // create arrows and lines
 svg.append("line")
-    .attr("x1", -150)
-    .attr("y1", height/2 - 50 - smudge )
-    .attr("x2", -100)
-    .attr("y2", height/2 - 90 - smudge)
+    .attr("x1", -50)
+    .attr("y1", height/2 - 30)
+    .attr("x2", 50)
+    .attr("y2", height/4 + 30)
     .attr("stroke-width", 1)
     .attr("stroke", "black")
     .attr("marker-end", "url(#triangle)");
@@ -372,15 +370,15 @@ svg.append("svg:defs").append("svg:marker")
 svg
     .append("text")
     // .attr("class", "treeLegend")
-    .attr("x", -150)
-    .attr("y", height/2 - 130 - smudge)
+    .attr("x", -50)
+    .attr("y", height/2 - 90)
     .text("False");
 
 svg.append("line")
-    .attr("x1", -150)
-    .attr("y1", height/2 + 60 + smudge)
-    .attr("x2", -100)
-    .attr("y2", height/2 +90 + smudge)
+    .attr("x1", -50)
+    .attr("y1", height/2 + 30)
+    .attr("x2", 50)
+    .attr("y2", 3*height/4 - 30)
     .attr("stroke-width", 1)
     .attr("stroke", "black")
     .attr("marker-end", "url(#triangle)");
@@ -398,8 +396,8 @@ svg.append("svg:defs").append("svg:marker")
 svg
     .append("text")
     // .attr("class", "treeLegend")
-    .attr("x", -150)
-    .attr("y", height/2 + 130 + smudge)
+    .attr("x", -50)
+    .attr("y", height/2 + 90)
     .text("True");
 
 
