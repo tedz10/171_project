@@ -219,6 +219,15 @@ body, html {
   text-align:center;
 }
 
+.rushInfo {
+  color: #777;
+  background-color:white;
+  text-align:center;
+  padding: 20px 20px;
+  /*text-align: justify;*/
+  text-align:center;
+}
+
 h2, h3 {
   letter-spacing: 3px;
   color: #000000;
