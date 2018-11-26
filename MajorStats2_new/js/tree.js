@@ -347,11 +347,12 @@ svg
 
 
 // create arrows and lines
+var smudge = 55
 svg.append("line")
-    .attr("x1", -50)
-    .attr("y1", height/2 - 30)
-    .attr("x2", 50)
-    .attr("y2", height/4 + 30)
+    .attr("x1", -150)
+    .attr("y1", height/2 - 80 - smudge)
+    .attr("x2", -100)
+    .attr("y2", height/2 - 120 - smudge)
     .attr("stroke-width", 1)
     .attr("stroke", "black")
     .attr("marker-end", "url(#triangle)");
@@ -370,15 +371,15 @@ svg.append("svg:defs").append("svg:marker")
 svg
     .append("text")
     // .attr("class", "treeLegend")
-    .attr("x", -50)
-    .attr("y", height/2 - 90)
+    .attr("x", -150)
+    .attr("y", height/2 - 170)
     .text("False");
 
 svg.append("line")
-    .attr("x1", -50)
-    .attr("y1", height/2 + 30)
-    .attr("x2", 50)
-    .attr("y2", 3*height/4 - 30)
+    .attr("x1", -150)
+    .attr("y1", height/2 + 80 + smudge)
+    .attr("x2", -100)
+    .attr("y2", height/2 + 120 + smudge)
     .attr("stroke-width", 1)
     .attr("stroke", "black")
     .attr("marker-end", "url(#triangle)");
@@ -396,8 +397,8 @@ svg.append("svg:defs").append("svg:marker")
 svg
     .append("text")
     // .attr("class", "treeLegend")
-    .attr("x", -50)
-    .attr("y", height/2 + 90)
+    .attr("x", -150)
+    .attr("y", height/2 + 170)
     .text("True");
 
 
