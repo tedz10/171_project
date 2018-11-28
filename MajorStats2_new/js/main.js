@@ -247,7 +247,7 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
         // .attr("class", "treeLegend")
         .attr("x", 0)
         .attr("y", -100)
-        .attr("class", "treeLegendLabel")
+        // .attr("class", "treeLegendLabel")
         .text("Legend")
         .style("font-weight", "bold")
         .style("font-size", "16px")

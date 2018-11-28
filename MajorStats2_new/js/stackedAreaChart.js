@@ -15,7 +15,7 @@ StackedAreaChart = function(_parentElement, _data, _title){
     this.title = _title;
 
     // DEBUG RAW DATA
-    console.log(this.data);
+    // console.log(this.data);
 
     this.initVis();
 }
@@ -28,7 +28,7 @@ StackedAreaChart = function(_parentElement, _data, _title){
 
 StackedAreaChart.prototype.initVis = function(){
 	var vis = this;
-	console.log(vis);
+	// console.log(vis);
 
 	vis.margin = { top: 40, right: 20, bottom: 60, left: 40 };
 
@@ -75,10 +75,10 @@ StackedAreaChart.prototype.initVis = function(){
     // console.log(colorScale.domain)
 	// TO-DO: Initialize stack layout
     var dataCategories = colorScale.domain()
-    console.log(dataCategories)
+    // console.log(dataCategories)
     vis.stack = d3.stack()
         .keys(dataCategories);
-    console.log(vis.stack)
+    // console.log(vis.stack)
 
     // TO-DO: Rearrange data
 
@@ -162,7 +162,7 @@ StackedAreaChart.prototype.updateVis = function(){
             return vis.area(d);
         })
         .on("mouseover", function(d){
-            console.log(d)
+            // console.log(d)
             vis.svg.selectAll(".tip_id")
                 .text(d.key);
         });
