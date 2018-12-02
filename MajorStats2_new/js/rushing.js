@@ -30,9 +30,13 @@ Rushing.prototype.loadData = function() {
 };
 
 Rushing.prototype.initVis = function() {
-    var vis = this
+    var vis = this;
+
+    var trueWidth = $("#info4").width();
+    console.log(trueWidth);
+
     vis.margin = {top: 30, right: 150, bottom: 30, left: 30};
-    vis.width = 960 - vis.margin.left - vis.margin.right;
+    vis.width = trueWidth - vis.margin.left - vis.margin.right;
     vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -411,7 +415,7 @@ Rushing.prototype.updateVis = function(){
         )
         .attr("stroke-width", function(d) {
 
-                if(d.city=="Seattle Seahawks"){
+                if(d.city==="Seattle Seahawks"){
                     return 3;
 
                 }else{

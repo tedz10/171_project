@@ -34,7 +34,8 @@
 		<hr>
 		<!--<br>-->
 		<div class="row">
-			<div class="col-md-6">
+			<div class = "col-md-4"></div>
+			<div class="col-md-4">
 				<p class = "large-font">Making the playoffs in the NFL is a big deal.</p>
 
 				<p>It's a make or break for some coaches and players whose multi-million dollar contracts are no guarantee
@@ -45,11 +46,7 @@
 
 			</div>
 
-			<div class="col-md-6">
-				<iframe width="420" height="315"
-						src="https://www.youtube.com/watch?v=WwnKiTfOJ-E">
-				</iframe>
-			</div>
+			<div class = "col-md-4"></div>
 		</div>
 
 	</div>
@@ -77,10 +74,18 @@
 
 		<div class="container-fluid">
 			<div class="row">
-				<div class = "col-md-2">
+				<div class = "col-md-3">
 
 				</div>
 				<div class="col-md-6">
+
+					<aside class="pquote">
+						<blockquote>
+							<p class = "pquote">“There are no shortcuts to building a team each season. You build the foundation brick by brick” - Bill Belichick</p>
+						</blockquote>
+					</aside>
+					<br>
+
 					<p>While various NFL teams and coaches hold different football philosophies on how to play
 						the game, each organization ultimately has the same goal – to win games and make the
 						playoffs. </p>
@@ -90,19 +95,19 @@
 					<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams
 						from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.
 				</div>
-				<div class = "col-md-4">
-					<aside class="pquote">
-						<blockquote>
-							<p class = "pquote">“There are no shortcuts to building a team each season. You build the foundation brick by brick” - Bill Belichick</p>
-						</blockquote>
-					</aside>
+				<div class = "col-md-3">
+
 				</div>
 
 				<br>
 
 			</div>
 
-			<hr class = "full">
+			<!--<hr class = "full">-->
+			<br>
+			<br>
+			<br>
+			<br>
 			<br>
 
 
@@ -168,25 +173,24 @@
 				<div class = "col-md-3">
 
 				</div>
-		<div class="container-fluid">
-
-
-			<!-- Visualization placeholders -->
-
-			<!--<div id="timeline"></div>-->
-			<div class="row">
-				<div class="col-md-6">
-					<div id="stacked-area-chart"></div>
-				</div>
-				<div class="col-md-6">
-					<div id="stacked-area-chart2"></div>
-				</div>
 			</div>
+				<div class="container-fluid">
 
-		</div>
+					<h5>Mouse over an area to see what type of points were scored.</h5>
+					<!-- Visualization placeholders -->
 
+					<!--<div id="timeline"></div>-->
+					<div class="row">
+						<div class="col-md-6">
+							<div id="stacked-area-chart"></div>
+						</div>
+						<div class="col-md-6">
+							<div id="stacked-area-chart2"></div>
+						</div>
+					</div>
 
-			</div>
+				</div>
+
 
 		</div>
 
@@ -224,7 +228,7 @@
 
 					</div>
 					<div class="col-md-6 left">
-						<br>
+						<!--<br>-->
 						<aside class="pquote">
 							<blockquote>
 								<p class = "pquote">“Offense sells tickets, but defense wins championships.”
@@ -232,17 +236,16 @@
 							</blockquote>
 						</aside>
 						<br>
-						<br>exa
+						<!--<br>-->
 						<br>
 
-						<p>The adage "defense wins championships" may not necessarily hold in our decision tree. However
+						<p>The age-old adage "defense wins championships" may not necessarily hold in our decision tree. However
 							, defense is the second most important attribute in our decision tree. Teams that let up
 							more offensive yards were far less likely to make the playoffs. </p>
 
 						<p>In 2016, the Denver Broncos allowed significantly fewer yards than any other NFL team.
-						</p>
-						<p>Despite analysts clamoring over high-powered offenses such as Carolina and New England,
-							the Denver Defense led the organization to a success 12 - 4 record.
+							Despite analysts clamoring over high-powered offenses such as Carolina and New England,
+							the Denver defense led the organization to a success 12 - 4 record.
 						</p>
 						<p>
 							On their path through the playoffs, the defense held steadfast against both the Patriots
@@ -256,11 +259,11 @@
 					</div>
 					<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-3" id= "text1">
+					<div class="col-md-3">
 					</div>
 					<div class="col-md-6 att1" id = "chart-area">
 					</div>
-					<div class="col-md-3" id= "text1">
+					<div class="col-md-3">
 					</div>
 				</div>
 
@@ -268,7 +271,7 @@
 						<br>
 						<br>
 
-				<h4 id = "specific_name">Click data point to see team specific details</h4>
+				<h5 id = "specific_name">Mouse over a data point to see team specific details</h5>
 			</div>
 			<div class="row">
 				<!--<div class="col-md-3 att1" id = "chart1">-->
@@ -279,14 +282,14 @@
 				<!--</div>-->
 				<!--<div class="col-md-3" id= "chart4">-->
 				<!--</div>-->
-				<div class="container content">
+				<!--<div class="container content">-->
 
 					<!--<span class="logo glyphicon glyphicon-globe"></span>-->
 
 					<!-- Parent container for the scatterplot -->
 					<div id="chart-area-yards">
 
-					</div>
+					<!--</div>-->
 
 					<!--<p class="source-desc">Source: <a href="http://www.gapminder.org/data">http://www.gapminder.org/data</a></p>-->
 
@@ -326,7 +329,7 @@
 	<div class = "info">
 
 		<h2>FACTOR 3: A STRONG RUN GAME</h2>
-		<p>A stout defense and a strong run game are generally regarded as the keys to any successful championship team. There is huge value in secure yards and controlling the clock, and our decision tree agrees. </p>
+		<!--<p>A stout defense and a strong run game are generally regarded as the keys to any successful championship team. There is huge value in secure yards and controlling the clock, and our decision tree agrees. </p>-->
 		<hr>
 
 		<div class="container-fluid">
@@ -343,6 +346,7 @@
 							</p>
 						</blockquote>
 					</aside>
+					<br>
 					<p>The NFL has emerged into a pass-heavy game, much more so than the history of the league has ever seen.
 						While passing records continue to fall with the incorporation of faster, spread offense, perhaps the run game is getting overlooked as the true key to success.
 					</p>
@@ -352,6 +356,8 @@
 					<p>
 						Despite pundits and players’ declarations that year that the NFL “is a passing league now”, the Seahawks’ rushing power led them all the way to a second consecutive Super Bowl appearance that year.
 					</p>
+					<br>
+					<br>
 					<!--<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams-->
 					<!--from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.-->
 				</div>
@@ -386,9 +392,9 @@
 
 		</form>
 	</div>
-		<div class = "row">
+
 			<div id = "info4"></div>
-		</div>
+
 	<div class = "rushInfo" >
 		<h4>Rushing By The Numbers</h4>
 		<div   id="tableClear">
@@ -410,9 +416,9 @@
 
 	<div class = "info" id = "info6">
 		<h2>FACTOR 4: TURNOVER DIFFERENTIAL</h2>
-		A team needs the balls in their hands to score and win games. Likewise, the most successful teams are those that can hang on to the ball and take it away from their opponents.
+		<!--A team needs the balls in their hands to score and win games. Likewise, the most successful teams are those that can hang on to the ball and take it away from their opponents.-->
 		<hr>
-		<br>
+		<!--<br>-->
 
 		<div class="container-fluid">
 			<div class="row">
@@ -427,7 +433,7 @@
 
 						</blockquote>
 					</aside>
-					<br>
+					<!--<br>-->
 					<br>
 					<p>In Superbowl 49, Malcolm Butler iconically picked up Russell WIlson on the goal line
 						to seal the Patriots’ 24-21 victory over the Seahawks. Needless to say, big plays such as
@@ -510,7 +516,7 @@
 					<div class="col-md-2">
 					</div>
 					<div class="col-md-5">
-						<h3 id = "specific_name2">Click Bars for Info</h3>
+						<h3 id = "specific_name2">Click a Bar for More Info</h3>
 						<table style="width:100%" class="table sortable" id="mytable">
 							<thead>
 							<tr>

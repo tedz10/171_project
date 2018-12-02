@@ -115,9 +115,12 @@ function createVis() {
 
 }
 
+
+
 var margin2 = {top: 140, right: 60, bottom: 30, left: 60},
     width2 = 800 - margin2.left - margin2.right,
     height2 = 500 - margin2.top - margin2.bottom;
+
 // Load CSV file
 d3.csv("data/OpponentOffensiveYards.csv", function(data){
 
@@ -127,6 +130,9 @@ d3.csv("data/OpponentOffensiveYards.csv", function(data){
         d.Offensive_Yards_Allowed = +d.Offensive_Yards_Allowed;
         d.Year = +d.Year;
     });
+
+    // var newTrueWidth = $("#chart-area-yards").width();
+    // console.log(newTrueWidth);
 
     // Sort countries descending by population
     data.sort(function(a, b) {

@@ -26,10 +26,14 @@ Turnover.prototype.loadData = function() {
 };
 
 Turnover.prototype.initVis = function() {
-    var vis = this
+    var vis = this;
+
+    var trueWidth = $("#turnoverChart").width();
+    console.log(trueWidth);
+
     vis.margin = {top: 30, right: 30, bottom: 30, left: 30};
     // vis.margin = {top: 0, right: 0, bottom: 0, left: 0};
-    vis.width = 960 - vis.margin.left - vis.margin.right;
+    vis.width = trueWidth - vis.margin.left - vis.margin.right;
     vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
     vis.svg = d3.select("#" + vis.parentElement).append("svg")

@@ -380,7 +380,7 @@ blockquote {
 }
 
 .large-font {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -394,3 +394,8 @@ blockquote {
   /*font-color: white;*/
 
 /*}*/
+
+
+.area-title {
+  font-size: 16px;
+}
