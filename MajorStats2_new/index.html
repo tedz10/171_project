@@ -14,25 +14,44 @@
 <body>
 
 
-	<!--<h1>Unlocking Success in the NFL</h1>-->
-
-	<!--<br>-->
-	<!--<hr>-->
-	<!--<br>-->
-	<div class="parallax" id = "p1">
+	<div class="parallax" id = "p0">
 		<div class = "caption">
-			<span class = "border"> UNLOCKING SUCCESS IN THE NFL</span>
+			<span class = "border"> WHAT'S IT TAKE TO MAKE THE PLAYOFFS? </span>
 		</div>
 	</div>
 
-	<!--<img src="NFL-pic.jpg" alt="Italian Trulli">-->
 
-	<div class = "info" id = "info1">
-		<h4>INTRO</h4>
+
+
+	<!---->
+	<!---->
+	<!--INTRODUCTION-->
+	<!---->
+	<!---->
+
+	<div class = "info white" id = "info1">
+		<h3>IT'S THE PLAYOFFS BABY</h3>
 		<hr>
 		<!--<br>-->
-		<p>With 32 teams in the NFL and only 12 playoff spots, each team sets out every season with the goal of winning games and making the playoffs.
-		In this project, we seek to uncover and explore which features should coaches focus on to build a playoff caliber team</p>
+		<div class="row">
+			<div class="col-md-6">
+				<p class = "large-font">Making the playoffs in the NFL is a big deal.</p>
+
+				<p>It's a make or break for some coaches and players whose multi-million dollar contracts are no guarantee
+				they'll still be on the roster next season if teams aren't still out on the field come January.</p>
+
+				<p>With 32 teams in the NFL and only 12 playoff spots, each team sets out every season with the goal of winning games and making the playoffs.
+					In this project, we seek to uncover and explore which features should coaches focus on to build a playoff caliber team</p>
+
+			</div>
+
+			<div class="col-md-6">
+				<iframe width="420" height="315"
+						src="https://www.youtube.com/watch?v=WwnKiTfOJ-E">
+				</iframe>
+			</div>
+		</div>
+
 	</div>
 	<div class="parallax" id = "p1">
 		<div class = "caption">
@@ -45,13 +64,12 @@
 
 
 	<div class = "info" id = "info2">
-		<!--<h4>DISCUSS POINT 2 BASED ON MAIN VISUALIZATION ABOVE</h4>-->
+
 		<div class="container-fluid">
 			<div class="row">
 
 			</div>
-			<h2 id = "specific_name">Decision Tree</h2>
-			<p>Click each node of the tree to see how a specific statistic relates to a team's playoff chances</p>
+			<h2 id = "specific_name">EXAMINING KEY FACTORS</h2>
 
 		</div>
 		<hr>
@@ -62,12 +80,7 @@
 				<div class = "col-md-2">
 
 				</div>
-				<div class="col-md-8 left">
-					<aside class="pquote">
-						<blockquote>
-							<p class = "pquote">“There are no shortcuts to building a team each season. You build the foundation brick by brick” - Bill Belichick</p>
-						</blockquote>
-					</aside>
+				<div class="col-md-6">
 					<p>While various NFL teams and coaches hold different football philosophies on how to play
 						the game, each organization ultimately has the same goal – to win games and make the
 						playoffs. </p>
@@ -77,19 +90,33 @@
 					<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams
 						from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.
 				</div>
-				<div class = "col-md-2">
-
+				<div class = "col-md-4">
+					<aside class="pquote">
+						<blockquote>
+							<p class = "pquote">“There are no shortcuts to building a team each season. You build the foundation brick by brick” - Bill Belichick</p>
+						</blockquote>
+					</aside>
 				</div>
 
+				<br>
+
 			</div>
-			<div class="row">
-				<div class="col-md-12" id= "treeLegend">
-			</div>
+
+			<hr class = "full">
+			<br>
+
+
+			<div>
+				<!--<img src = "img/playbook1.png" style = "width:100%;">-->
+				<h3>FINDING PREDICTORS</h3>
+				<p>Click each node of the tree to see how a specific statistic relates to a team's playoff chances</p>
 				<div class="row">
-					<div class="col-md-12" id= "tree">
+						<div class="col-md-12" id= "treeLegend"></div>
+					<div class="row">
+						<div class="col-md-12" id = "tree"></div>
+					</div>
 				</div>
 			</div>
-		</div>
 	</div>
 
 	<div class="parallax" id = "p2">
@@ -104,8 +131,7 @@
 
 
 	<div class = "info" id = "info2">
-		<h2>Factor 1: Points per Game</h2>
-		<p>As seen in the decision tree above, points per game is the number one feature separating playoff teams from mediocre teams. One team that has been dominant in outscoring the entire leage over the last decade is the New England Patriots.</p>
+		<h2>FACTOR 1: POINTS PER GAME</h2>
 		<hr>
 		<!--<br>-->
 
@@ -115,12 +141,16 @@
 
 				</div>
 				<div class="col-md-6 left">
+					<br>
 					<aside class="pquote">
 						<blockquote>
 							<p class = "pquote">“The Patriots have been winning the same way every year: lots and lots
 								of offense — with Tom Brady at the vanguard” - The Ringer </p>
 						</blockquote>
 					</aside>
+					<br>
+					<br>
+
 					<p>From 2010 - 2017, the New England Patriots dominated the league.
 						They won the AFC East all 8 years, won the AFC championship 4 times,
 						and won the Super Bowl 2 times. Unsurprisingly, they were a top 3 point scorer for
@@ -131,6 +161,7 @@
 						comes in the form of touchdowns, which stresses the advantage of touchdowns over field
 						goals.
 					</p>
+					<br>
 					<!--<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams-->
 					<!--from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.-->
 				</div>
@@ -164,10 +195,17 @@
 
 
 
+
+		<!---->
+		<!---->
+		<!--DEFENSE-->
+		<!---->
+		<!---->
+
 	<div class="parallax" id = "p3">
 		<div class = "caption">
 			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
-				Never Forget Defense
+				THE BEST OFFENSE IS GOOD DEFENSE
 			</span>
 		</div>
 	</div>
@@ -176,22 +214,31 @@
 		<div class="container">
 
 			<br>
-			<h2>Factor 2: Defense</h2>
+			<h2>FACTOR 2: A STOUT DEFENSE</h2>
 
-			<p>The adage "defense wins championships" may not necessarily hold in our decision tree. However, defense is the second most important attribute in our decision tree. Teams that let up more offensive yards were far less likely to make the playoffs. </p>
 			<hr>
+
 			<div class="container-fluid">
 				<div class="row">
 					<div class = "col-md-3">
 
 					</div>
-					<div class="col-md-6 left" id= "tree">
+					<div class="col-md-6 left">
+						<br>
 						<aside class="pquote">
 							<blockquote>
 								<p class = "pquote">“Offense sells tickets, but defense wins championships.”
 									- Bear Bryant </p>
 							</blockquote>
 						</aside>
+						<br>
+						<br>exa
+						<br>
+
+						<p>The adage "defense wins championships" may not necessarily hold in our decision tree. However
+							, defense is the second most important attribute in our decision tree. Teams that let up
+							more offensive yards were far less likely to make the playoffs. </p>
+
 						<p>In 2016, the Denver Broncos allowed significantly fewer yards than any other NFL team.
 						</p>
 						<p>Despite analysts clamoring over high-powered offenses such as Carolina and New England,
@@ -216,6 +263,11 @@
 					<div class="col-md-3" id= "text1">
 					</div>
 				</div>
+
+						<br>
+						<br>
+						<br>
+
 				<h4 id = "specific_name">Click data point to see team specific details</h4>
 			</div>
 			<div class="row">
@@ -244,7 +296,6 @@
 			<br>
 			<br>
 
-
 				</div>
 
 			</div>
@@ -258,6 +309,12 @@
 	<br>
 
 
+		<!---->
+		<!---->
+		<!--RUN GAME-->
+		<!---->
+		<!---->
+
 	<div class="parallax" id = "p4">
 		<div class = "caption">
 			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
@@ -268,7 +325,7 @@
 
 	<div class = "info">
 
-		<h2>Factor 3: Rushing Yards</h2>
+		<h2>FACTOR 3: A STRONG RUN GAME</h2>
 		<p>A stout defense and a strong run game are generally regarded as the keys to any successful championship team. There is huge value in secure yards and controlling the clock, and our decision tree agrees. </p>
 		<hr>
 
@@ -282,7 +339,7 @@
 						<blockquote>
 							<p class = "pquote">This year alone, Tom Brady hit 500 career pass TD’s and Drew Brees broke
 								the all-time passing yards record - and more records are on the verge of being broken
-								as well.
+								as well. But that's not the only recipe for success.
 							</p>
 						</blockquote>
 					</aside>
@@ -306,7 +363,6 @@
 
 		<br>
 		<br>
-		<!--<br>-->
 
 		<form class="form-inline">
 			<div class="form-group">
@@ -347,13 +403,13 @@
 	<div class="parallax" id = "p5">
 		<div class = "caption">
 			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
-				Turnovers Kill
+				TURNOVERS KILL
 			</span>
 		</div>
 	</div>
 
 	<div class = "info" id = "info6">
-		<h2>Factor 4: Turnover Differential</h2>
+		<h2>FACTOR 4: TURNOVER DIFFERENTIAL</h2>
 		A team needs the balls in their hands to score and win games. Likewise, the most successful teams are those that can hang on to the ball and take it away from their opponents.
 		<hr>
 		<br>
@@ -371,14 +427,23 @@
 
 						</blockquote>
 					</aside>
+					<br>
+					<br>
 					<p>In Superbowl 49, Malcolm Butler iconically picked up Russell WIlson on the goal line
 						to seal the Patriots’ 24-21 victory over the Seahawks. Needless to say, big plays such as
 						interceptions and fumbles can shift the momentum in a game and are huge determinants to the
 						success of a team.
 						</p>
 					<p>
-						In 2015, the Carolina Panthers led the league with a 15 - 1 record and won the NFC championships. Part of this success was driven by star all-pro cornerback Josh Norman and linebacker Luke Keuchly. The panthers were able to rack up a +26 turnover differential, with 24 picks verse 11 interceptions thrown and 28 fumble recoveries verse 15 lost. The Panthers dominated the NFL with their ability to take the ball away, and ultimately helped them land a spot in the Superbowl.
+						In 2015, the Carolina Panthers led the league with a 15 - 1 record and won the NFC championships
+						. Part of this success was driven by star All-Pro cornerback Josh Norman and linebacker Luke Keuchly.
+						</p>
+					<p>The Panthers were able to rack up a +26 turnover differential, with 24 picks verse 11 intercept
+						ions thrown and 28 fumble recoveries verse 15 lost. The Panthers dominated the NFL with their
+						ability to take the ball away, and ultimately helped them land a spot in the Superbowl.
 					</p>
+					<br>
+					<br>
 					<!--<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams-->
 					<!--from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.-->
 				</div>
@@ -502,6 +567,57 @@
 
 	</div>
 
+
+
+
+
+
+		<div class="parallax" id = "p6">
+			<div class = "caption">
+			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+				ABOUT US
+			</span>
+			</div>
+		</div>
+
+		<div class = "info" id = "info7">
+			<!--<h2>FACTOR 4: TURNOVER DIFFERENTIAL</h2>-->
+			<!--A team needs the balls in their hands to score and win games. Likewise, the most successful teams are those that can hang on to the ball and take it away from their opponents.-->
+			<!--<hr>-->
+			<!--<br>-->
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class = "col-md-3">
+						<h5>Ray An</h5>
+						<hr>
+						<p>Ray is ... </p>
+					</div>
+					<div class="col-md-3">
+						<h5>Curtis Hsu</h5>
+						<hr>
+					</div>
+					<div class = "col-md-3">
+						<h5>Kelly McDougall</h5>
+						<hr>
+					</div>
+
+					<div class = "col-md-3">
+						<h5>Ted Zhu</h5>
+						<hr>
+					</div>
+
+
+				</div>
+
+			</div>
+
+
+
+
+
+
+		</div>
 
 
 

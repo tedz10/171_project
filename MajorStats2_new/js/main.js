@@ -60,7 +60,7 @@ function loadData(error, data, rushingData, turnOverData, data1, data2, treeData
     //**********STACKED AREA CHART ********//
 
     pats_allData = data1;
-    console.log(pats_allData)
+    console.log(pats_allData);
 
 
     pats_allData.forEach(function(d){
@@ -100,6 +100,9 @@ function loadData(error, data, rushingData, turnOverData, data1, data2, treeData
     createVis();
 
 }
+
+
+
 
 // this is for the stacked area chart
 function createVis() {

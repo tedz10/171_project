@@ -7,6 +7,7 @@ $("#select-conf-type").on("change", function(){
     rushingBar.filterVis(this.value);
 });
 
+
 var orderingType;
 
 Rushing = function(_parentElement, _data){
@@ -31,7 +32,7 @@ Rushing.prototype.loadData = function() {
 Rushing.prototype.initVis = function() {
     var vis = this
     vis.margin = {top: 30, right: 150, bottom: 30, left: 30};
-    vis.width = 1200 - vis.margin.left - vis.margin.right;
+    vis.width = 960 - vis.margin.left - vis.margin.right;
     vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -64,7 +65,7 @@ Rushing.prototype.initVis = function() {
         .attr('class', 'd3-tip')
         .offset([-30, -50])
         .html(function(d, i) {
-            return "<span id='tipText' style='color:red'></span>";
+            return "<span id='tipText'></span>";
         })
 
     vis.svg.call(tip);
@@ -100,7 +101,6 @@ Rushing.prototype.reSort = function(orderingType) {
     vis.svg.selectAll('.axis').remove();
     vis.svg.selectAll('.meanLine').remove();
     vis.svg.selectAll('.meanText').remove();
-
     vis.updateVis()
 
 
@@ -144,21 +144,38 @@ Rushing.prototype.makeNFCTable = function() {
 
     });
 
+    nfcTable = nfc.map(function(obj) {
+        return {
+            Team: obj.Team,
+            City: obj.City,
+            Rushing: obj.Rushing,
+            Passing: obj.Passing,
+            WL: obj.WL,
+            Wins: obj.Wins,
+            Loss: obj.Loss,
+
+        }
+    });
 
 
 
     var sortInfo = { key: "id", order: d3.descending };
 
-    var table = d3.select("#nfcTable").insert("table",":first-child").attr("id","NameList");
+    var table = d3.select("#nfcTable").append("table",":first-child").attr("class","table");
     var thead = table.append("thead");
     var tbody = table.append("tbody");
 
+
+
     thead.append("tr")
         .selectAll("th")
-        .data(d3.entries(nfc[0]))
+        .data(d3.entries(nfcTable[0]))
         .enter()
         .append("th")
-        .on("click", function(d,i){createTableBody(d.key);})
+        .on("click", function(d,i){
+            createTableBody(d.key);
+            rushingBar.reSort(this.innerHTML);
+        })
         .text(function(d){return d.key;})
     ;
     createTableBody("id");
@@ -168,10 +185,10 @@ Rushing.prototype.makeNFCTable = function() {
         if (sortInfo.order.toString() == d3.ascending.toString())
         { sortInfo.order = d3.descending; }
         else { sortInfo.order = d3.ascending; }
-        nfc.sort(function(x,y){return sortInfo.order(x[sortKey], y[sortKey])});
+        nfcTable.sort(function(x,y){return sortInfo.order(x[sortKey], y[sortKey])});
         tbody
             .selectAll("tr")
-            .data(nfc)
+            .data(nfcTable)
             .enter()
             .append("tr")
             .selectAll("td")
@@ -184,7 +201,7 @@ Rushing.prototype.makeNFCTable = function() {
         ;
         tbody
             .selectAll("tr")
-            .data(nfc)
+            .data(nfcTable)
             .attr('id', function(d){
                 return d.Team
             })
@@ -216,19 +233,34 @@ Rushing.prototype.makeAFCTable = function() {
 
     });
 
+    afcTable = afc.map(function(obj) {
+        return {
+            Team: obj.Team,
+            City: obj.City,
+            Rushing: obj.Rushing,
+            Passing: obj.Passing,
+            WL: obj.WL,
+            Wins: obj.Wins,
+            Loss: obj.Loss,
+
+        }
+    });
 
     var sortInfo = { key: "id", order: d3.descending };
 
-    var table = d3.select("#afcTable").insert("table",":first-child").attr("id","NameList");
+    var table = d3.select("#afcTable").append("table",":first-child").attr("class","table");
     var thead = table.append("thead");
     var tbody = table.append("tbody");
 
     thead.append("tr")
         .selectAll("th")
-        .data(d3.entries(afc[0]))
+        .data(d3.entries(afcTable[0]))
         .enter()
         .append("th")
-        .on("click", function(d,i){createTableBody(d.key);})
+        .on("click", function(d,i){
+            createTableBody(d.key);
+            rushingBar.reSort(this.innerHTML);
+        })
         .text(function(d){return d.key;})
     ;
     createTableBody("id");
@@ -238,10 +270,10 @@ Rushing.prototype.makeAFCTable = function() {
         if (sortInfo.order.toString() == d3.ascending.toString())
         { sortInfo.order = d3.descending; }
         else { sortInfo.order = d3.ascending; }
-        afc.sort(function(x,y){return sortInfo.order(x[sortKey], y[sortKey])});
+        afcTable.sort(function(x,y){return sortInfo.order(x[sortKey], y[sortKey])});
         tbody
             .selectAll("tr")
-            .data(afc)
+            .data(afcTable)
             .enter()
             .append("tr")
             .attr('id', function(d){
@@ -253,10 +285,9 @@ Rushing.prototype.makeAFCTable = function() {
             .append("td")
             .text(function(d){return d.value;})
         ;
-        // 更新する
         tbody
             .selectAll("tr")
-            .data(afc)
+            .data(afcTable)
             .selectAll("td")
             .data(function(d){return d3.entries(d)})
             .text(function(d){return d.value;})
@@ -357,10 +388,10 @@ Rushing.prototype.updateVis = function(){
         .attr("height", function(d) { return vis.height - y(d.value); })
         .attr("fill", function(d) {
 
-                if(d.city=="Seattle Seahawks"){
+                if (d.city=="Seattle Seahawks"){
                     return z2(d.key);
 
-                }else{
+                } else{
                     return z(d.key); }
 
             }
@@ -385,16 +416,13 @@ Rushing.prototype.updateVis = function(){
 
                 }else{
                     return 1 }
-
             }
-
         )
 
 
 
         .style("opacity", 0.8)
         .on("mouseover", function(d) {
-            console.log(d)
 
             tip.show()
             $("#tipText").html(d.city + "<br/>" + d.key + ": " + d.value + "<br/>W-L:%: " + d.wl);
@@ -542,7 +570,4 @@ Rushing.prototype.updateVis = function(){
 
 
 
-
 }
-
-

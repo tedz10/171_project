@@ -153,9 +153,15 @@ h1{
 
 }
 
-#p1 {
+#p0 {
   background-image: url('football4.jpg');
   min-height: 100%;
+}
+
+#p1 {
+  background-image: url('playbook2.jpg');
+  min-height: 600px;
+  opacity: 80%;
 }
 
 #p2 {
@@ -176,6 +182,11 @@ h1{
 
 #p5 {
   background-image: url('brady.jpg');
+  min-height: 600px;
+}
+
+#p6 {
+  background-image: url('seas.jpg');
   min-height: 600px;
 }
 
@@ -217,6 +228,7 @@ body, html {
   padding: 50px 80px;
   /*text-align: justify;*/
   text-align:center;
+  /*min-height: 100%;*/
 }
 
 .rushInfo {
@@ -228,10 +240,17 @@ body, html {
   text-align:center;
 }
 
-h2, h3 {
+h2 {
   letter-spacing: 3px;
   color: #000000;
   text-align: center
+}
+
+h3{
+  letter-spacing: 1.5px;
+  color: #000000;
+  text-align: center;
+  /*font-weight: bold;*/
 }
 
 h4, h5 {
@@ -240,7 +259,7 @@ h4, h5 {
 }
 
 p {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /*.noplayoff{*/
@@ -335,26 +354,43 @@ p {
 }
 
 
-
-
+/***************/
+/*PULLOUT QUOTE*/
+/***************/
 
 .pquote {
-  float: right;
-  width: 200px;
-  /*background: url(openquote.png) top left no-repeat;*/
-  color: #616161;
+  /*float: right;*/
+  /*width: 200px;*/
+  /*!*background: url(openquote.png) top left no-repeat;*!*/
+  /*color: #616161;*/
   font-size: 18px;
-  line-height: 0.9;
+  /*line-height: 0.9;*/
   font-style: italic;
-  padding: 20px;
-  margin: 10 px
+  /*padding: 20px;*/
+  margin: 10px
 }
 
 blockquote {
-  margin: 10 px;
+  margin: 10px;
 }
 
 .pquote p:first-letter {
   font-size: 40px;
   font-weight: bold;
 }
+
+.large-font {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.full {
+  width: 100%;
+}
+
+
+/*.white {*/
+  /*background-color: rgba(0, 0, 0, 0.99);*/
+  /*font-color: white;*/
+
+/*}*/
