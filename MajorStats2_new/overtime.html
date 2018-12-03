@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="tas-com">
+
+<head>
+    <meta charset="utf-8">
+    <title>NFL 2010-2017</title>
+    <script type="text/javascript" src="./lib/d3.v4.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway|Roboto+Mono|Varela+Round" rel="stylesheet">
+    <script src="./lib/prism.js" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="//d3js.org/d3-geo-projection.v1.min.js"></script>
+    <script src="./lib/topojson.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+    <!-- tomorrow  dark-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- load scripts -->
+    <script src="./js/newinitialisation.js"></script>
+    <script src="./js/color_labels.js"></script>
+    <script src="./js/fade.js"></script>
+    <script src="./js/focus_pointupdate.js"></script>
+
+    <script src="./js/geo_map.js"></script>
+    <script src="./js/animation_controlupdate.js"></script>
+
+    <script src="./js/tracesupdate.js"></script>
+    <script src="./js/generate_visupdate.js"></script>
+
+
+    <style type="text/css">
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+    }
+
+    .axis text {
+        font-family: sans-serif;
+        font-size: 11px;
+    }
+
+    .grid .tick {
+        stroke: lightgrey;
+        opacity: 0.3;
+        stroke-dasharray: 1, 3;
+    }
+
+    .graticule {
+        fill: none;
+        stroke: #777;
+        stroke-width: 0.5px;
+        stroke-opacity: 0.5;
+    }
+
+    .land {
+        fill: #DCDCDC;
+    }
+
+    .boundary {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 0.5px;
+    }
+
+    .tip {
+        position: absolute;
+        width: auto;
+        height: auto;
+        font-family: simsun;
+        font-size: 20px;
+        text-align: center;
+        border-style: solid;
+        border-width: 2px;
+        background-color: white;
+        border-radius: 7px;
+    }
+
+    .tip .tip_title {
+        border-bottom: 1px solid #000;
+        text-align: center;
+    }
+
+    .tip .tip_detail {
+        /*inline will inherit its parent div's text align*/
+        display: inline;
+        /*text-align: left;*/
+    }
+
+    .hover-line {
+        stroke: rgb(148, 33, 147);
+        stroke-width: 2px;
+        stroke-dasharray: 3, 3;
+    }
+
+    @media screen and (min-width: 1300px) {
+        .map {
+            float: left;
+            width: 65%;
+        }
+        .chart_label_container {
+            float: left;
+            width: 35%;
+        }
+        .play_btn {
+            float: left;
+            margin-left: 50px;
+        }
+        .time_line {
+            margin-left: 70px;
+            line-height: 40px;
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+        .map {
+            float: left;
+            width: 100%;
+        }
+        .chart_label_container {
+            float: left;
+            width: 100%;
+        }
+        .play_btn {
+            float: left;
+        }
+        .time_line {
+            margin-left: 70px;
+            line-height: 40px;
+            width: 70%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    <h1>Gapminder World</h1>
+    <h2>Mapping the Wealth and Health of Nations</h2>
+ -->
+
+    <div class = "container-fluid">
+
+        <div class = "row">
+
+            <div id="bubble_div">
+                <h2></h2>
+                <div style="display:table;box-sizing:border-box;width:100%;">
+
+
+                </div>
+                <div class="map">
+                    <div id="bubble_chart_div" style="height:70%">
+                        <script src="./js/mainupdate.js">
+
+                        </script>
+                    </div>
+
+
+                    <div class = "container-fluid">
+                        <div style="display: table;box-sizing:border-box;width:100%;">
+                            <div class="play_btn">
+                                <input type="button" id="play_btn" value="Start" style="font-size:50px;width:50px;height:100px" onclick="play_btn()" />
+                            </div>
+                            <div id="slider_div" class="time_line">
+                            </div>
+                            <div style="display: table;box-sizing:border-box;width:100%;">
+                                <div style="float:left;margin-left:55px;width:40%;height:50%;">
+                                    <br>
+                                    <!--<input id='trace_checkBox'>-->
+                                    <!--<input id='line_checkBox'>-->
+                                    <br><br>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>

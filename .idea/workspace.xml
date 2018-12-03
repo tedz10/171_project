@@ -2,12 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e2de11e-ab5b-4b9f-a9cc-50fe6d336147" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/.idea/MajorStats2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/OffensiveYards.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/NFL-pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/brady.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/football1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/football3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/football4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/jjwatt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/marshawn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/MajorStats1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/OpponentOffensiveYards.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/TurnoverDifferential.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/fifa-world-cup.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/ARI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/ATL.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/BAL.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/CAR.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/DAL.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/JAC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/KC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/NE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/TEN.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/img/WAS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/nfl_ppg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/pats.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/pats_ppg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/rushing.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/strongandpoorlyperformingteams.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/data/tree.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/barchart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/d3-tip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/d3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/linegraph.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/rushing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/stackedAreaChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MajorStats2/js/turnover.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MajorStats2_new/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2_new/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MajorStats2_new/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2_new/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MajorStats2_new/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2_new/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MajorStats2_new/js/rushing.js" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2_new/js/rushing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MajorStats2_new/js/stackedAreaChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2_new/js/stackedAreaChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MajorStats2_new/js/turnover.js" beforeDir="false" afterPath="$PROJECT_DIR$/MajorStats2_new/js/turnover.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -101,23 +155,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="394" />
-          <entry key="html" value="3379" />
-          <entry key="js" value="895" />
+          <entry key="css" value="436" />
+          <entry key="html" value="3537" />
+          <entry key="js" value="970" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="394" />
-          <entry key="HTML" value="3379" />
-          <entry key="JavaScript" value="895" />
+          <entry key="CSS" value="436" />
+          <entry key="HTML" value="3537" />
+          <entry key="JavaScript" value="970" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
           <entry key="html" value="3" />
-          <entry key="js" value="18" />
+          <entry key="js" value="24" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
@@ -126,18 +180,66 @@
           <entry key="CSS" value="3" />
           <entry key="HTML" value="3" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="18" />
+          <entry key="JavaScript" value="24" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MajorStats2_new/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="212">
-              <caret line="178" column="82" selection-start-line="178" selection-start-column="82" selection-end-line="178" selection-end-column="82" />
+              <caret line="325" column="16" lean-forward="true" selection-start-line="325" selection-start-column="16" selection-end-line="325" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/newinitialisation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/turnover.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="571">
+              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/mainupdate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="28" column="55" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/tracesupdate.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/tree.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-121">
+              <caret line="502" column="44" lean-forward="true" selection-start-line="502" selection-start-column="44" selection-end-line="502" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -145,26 +247,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+            <state relative-caret-position="1312">
+              <caret line="444" column="2" lean-forward="true" selection-start-line="444" selection-start-column="2" selection-end-line="444" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/stackedAreaChart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="109" column="23" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MajorStats2_new/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="399" column="15" selection-start-line="399" selection-start-column="15" selection-end-line="399" selection-end-column="15" />
+            <state relative-caret-position="218">
+              <caret line="412" column="12" lean-forward="true" selection-start-line="412" selection-start-column="12" selection-end-line="412" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -173,15 +266,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tree.json</find>
-      <find>diagonal</find>
-      <find>90</find>
-      <find>link</find>
-      <find>fill</find>
-      <find>text</find>
-      <find>depth</find>
-      <find>Opponent Times Sca</find>
-      <find>56.15</find>
       <find>\/\/ this is for the stacked area chart\nfunction createVis\(\) \{\n\n    \/\/ TO\-DO\: Instantiate visualization objects here\n    areachart \= new StackedAreaChart\(\&quot;stacked\-area\-chart\&quot;\, pats_allData\, \&quot;Patriots\: Points per Season\&quot;\)\;\n    console\.log\(pats_allData\)\;\n    areachart2 \= new StackedAreaChart\(\&quot;stacked\-area\-chart2\&quot;\, nfl_allData\, \&quot;Entire NFL\: Average Points per Season\&quot;\)\;\n    \/\/ timeline \= new Timeline\(\&quot;timeline\&quot;\, allData\.years\)\;\n\n\}\n</find>
       <find>console</find>
       <find>tree</find>
@@ -200,8 +284,18 @@
       <find>chart-area-yards</find>
       <find>large</find>
       <find>examining</find>
-      <find>age-old</find>
       <find>title</find>
+      <find>age-old</find>
+      <find>diagonal</find>
+      <find>team</find>
+      <find>.axis</find>
+      <find>btn</find>
+      <find>rushing by the</find>
+      <find>circle</find>
+      <find>MOUSE OVER</find>
+      <find>.select</find>
+      <find>mous</find>
+      <find>mouse over</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -220,12 +314,13 @@
         <option value="$PROJECT_DIR$/MajorStats2/js/turnover.js" />
         <option value="$PROJECT_DIR$/MajorStats2/index.html" />
         <option value="$PROJECT_DIR$/MajorStats2/js/main.js" />
-        <option value="$PROJECT_DIR$/MajorStats2_new/js/turnover.js" />
+        <option value="$PROJECT_DIR$/MajorStats2_new/js/stackedAreaChart.js" />
         <option value="$PROJECT_DIR$/MajorStats2_new/js/rushing.js" />
         <option value="$PROJECT_DIR$/MajorStats2_new/js/main.js" />
-        <option value="$PROJECT_DIR$/MajorStats2_new/index.html" />
-        <option value="$PROJECT_DIR$/MajorStats2_new/js/stackedAreaChart.js" />
         <option value="$PROJECT_DIR$/MajorStats2_new/css/style.css" />
+        <option value="$PROJECT_DIR$/MajorStats2_new/js/mainupdate.js" />
+        <option value="$PROJECT_DIR$/MajorStats2_new/index.html" />
+        <option value="$PROJECT_DIR$/MajorStats2_new/js/turnover.js" />
       </list>
     </option>
   </component>
@@ -236,8 +331,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="72" />
-    <option name="y" value="64" />
+    <option name="x" value="-226" />
+    <option name="y" value="75" />
     <option name="width" value="1278" />
     <option name="height" value="890" />
   </component>
@@ -353,19 +448,19 @@
       <workItem from="1543187093292" duration="2871000" />
       <workItem from="1543192990744" duration="1823000" />
       <workItem from="1543464196122" duration="3947000" />
-      <workItem from="1543525084933" duration="12553000" />
+      <workItem from="1543525084933" duration="18964000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39413000" />
+    <option name="totallyTimeSpent" value="45824000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="64" width="1278" height="890" extended-state="0" />
+    <frame x="-226" y="75" width="1278" height="890" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49874687" visible="true" weight="0.1893397" />
-      <window_info id="Structure" order="1" sideWeight="0.5012531" side_tool="true" visible="true" weight="0.1893397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6729323" visible="true" weight="0.1893397" />
+      <window_info id="Structure" order="1" sideWeight="0.32706767" side_tool="true" visible="true" weight="0.1893397" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -495,48 +590,76 @@
         <state relative-caret-position="-1305" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/turnover.js">
+    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/stackedAreaChart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="31" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="241">
+          <caret line="113" column="38" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/rushing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        <state relative-caret-position="2250">
+          <caret line="150" column="12" lean-forward="true" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2_new/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="412" column="12" lean-forward="true" selection-start-line="412" selection-start-column="12" selection-end-line="412" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1312">
+          <caret line="444" column="2" lean-forward="true" selection-start-line="444" selection-start-column="2" selection-end-line="444" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/mainupdate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/tracesupdate.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/tree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="502" column="44" lean-forward="true" selection-start-line="502" selection-start-column="44" selection-end-line="502" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/newinitialisation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/turnover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MajorStats2_new/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
-          <caret line="178" column="82" selection-start-line="178" selection-start-column="82" selection-end-line="178" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MajorStats2_new/js/stackedAreaChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="109" column="23" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MajorStats2_new/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="399" column="15" selection-start-line="399" selection-start-column="15" selection-end-line="399" selection-end-column="15" />
+          <caret line="325" column="16" lean-forward="true" selection-start-line="325" selection-start-column="16" selection-end-line="325" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#11;n#div#3;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

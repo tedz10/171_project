@@ -30,13 +30,9 @@ Rushing.prototype.loadData = function() {
 };
 
 Rushing.prototype.initVis = function() {
-    var vis = this;
-
-    var trueWidth = $("#info4").width();
-    console.log(trueWidth);
-
+    var vis = this
     vis.margin = {top: 30, right: 150, bottom: 30, left: 30};
-    vis.width = trueWidth - vis.margin.left - vis.margin.right;
+    vis.width = 1160 - vis.margin.left - vis.margin.right;
     vis.height = 400 - vis.margin.top - vis.margin.bottom;
 
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -56,11 +52,10 @@ Rushing.prototype.initVis = function() {
     y = d3.scaleLinear()
         .rangeRound([vis.height, 0]);
 
-    z = d3.scaleOrdinal()
+    z = d3.scaleOrdinal() // General colour sace
         .range(["#7b6888",  "#d0743c", ]);
 
-    z2 = d3.scaleOrdinal()
-    //.range(["#95424B",  "#DDA135", ]);
+    z2 = d3.scaleOrdinal() // scale specific to SEA
         .range(["#7b6888",  "#d0743c", ]);
 
 
@@ -72,14 +67,13 @@ Rushing.prototype.initVis = function() {
             return "<span id='tipText'></span>";
         })
 
+
     vis.svg.call(tip);
 
     vis.wrangleData();
 };
 
 Rushing.prototype.wrangleData = function() {
-
-
     var vis = this;
 
     vis.data = vis.dataOrig.sort( function(a, b){
@@ -87,7 +81,6 @@ Rushing.prototype.wrangleData = function() {
     })
 
     vis.updateVis()
-
     vis.makeAFCTable()
     vis.makeNFCTable()
 
@@ -100,7 +93,6 @@ Rushing.prototype.reSort = function(orderingType) {
     vis.data = vis.data.sort( function(a, b){
         return b[orderingType] - a[orderingType];
     })
-
     vis.svg.selectAll('.bar').remove();
     vis.svg.selectAll('.axis').remove();
     vis.svg.selectAll('.meanLine').remove();
@@ -145,12 +137,12 @@ Rushing.prototype.makeNFCTable = function() {
 
     nfc = vis.dataOrig.filter(function (d) {
         return (d.Conference == "NFC");
-
     });
 
+    //Subset the original data to only pull in specific data points
     nfcTable = nfc.map(function(obj) {
         return {
-            Team: obj.Team,
+            Team : obj.Team,
             City: obj.City,
             Rushing: obj.Rushing,
             Passing: obj.Passing,
@@ -161,16 +153,13 @@ Rushing.prototype.makeNFCTable = function() {
         }
     });
 
-
-
     var sortInfo = { key: "id", order: d3.descending };
-
     var table = d3.select("#nfcTable").append("table",":first-child").attr("class","table");
     var thead = table.append("thead");
     var tbody = table.append("tbody");
 
 
-
+    // Build the table based on subseted data
     thead.append("tr")
         .selectAll("th")
         .data(d3.entries(nfcTable[0]))
@@ -237,6 +226,7 @@ Rushing.prototype.makeAFCTable = function() {
 
     });
 
+    //Subset the original data to only pull in specific data points
     afcTable = afc.map(function(obj) {
         return {
             Team: obj.Team,
@@ -256,6 +246,7 @@ Rushing.prototype.makeAFCTable = function() {
     var thead = table.append("thead");
     var tbody = table.append("tbody");
 
+    // Build the table based on subseted data
     thead.append("tr")
         .selectAll("th")
         .data(d3.entries(afcTable[0]))
@@ -305,8 +296,6 @@ Rushing.prototype.makeAFCTable = function() {
 Rushing.prototype.updateVis = function(){
     var vis = this;
 
-
-
     var columns = ["Rushing", "Passing", "City", "Playoffs", "WL"]
     var leg = ["Rushing", "Passing"]
     var keys = columns;
@@ -315,23 +304,37 @@ Rushing.prototype.updateVis = function(){
     x1.domain(keys).rangeRound([0, x0.bandwidth()]);
     y.domain([0, d3.max(vis.data, function(d) { return d3.max(keys, function(key) { return d[key]; }); })]).nice();
 
-
-
-
-
+    //Create playoff pattern
     vis.svg.append('pattern')
-        .attr('id', 'diagonalHatch')
+        .attr('id', 'diagonalHatchSea')
         .attr('patternUnits', 'userSpaceOnUse')
+        .attr("class", "hatch")
         .attr("width", x1.bandwidth())
         .attr('height', 4)
         .append('path')
+        .attr("class", "diagonalHatch")
         .attr('d', 'M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2')
-        .attr('stroke', '#000000')
-        .attr('stroke-width', 2);
+        .style('stroke-width', 2)
+        .style('stroke', '#E82C0C');
+
+    //Create playoff pattern
+    vis.svg.append('pattern')
+        .attr('id', 'diagonalHatch')
+        .attr('patternUnits', 'userSpaceOnUse')
+        .attr("class", "hatch")
+        .attr("width", x1.bandwidth())
+        .attr('height', 4)
+        .append('path')
+        .attr("class", "diagonalHatch")
+        .attr('d', 'M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2')
+        .style('stroke-width', 1)
+        .style('stroke', '#767676');
+
 
     vis.svg.append("pattern")
 
 
+    //Add the pattern where applicable
     group = g.append("g")
         .selectAll("g")
         .data(vis.data)
@@ -345,33 +348,40 @@ Rushing.prototype.updateVis = function(){
                 });
         })
         .enter().append("rect")
-        .attr("x", function(d) { return (x1(d.key)) *2.9; })
+        .attr("x", function(d) {
+            return ((x1(d.key)) *2.7) - 8;
+        })
         .attr("class", 'bar')
         .attr("y", function(d) { return y(d.value); })
-        .attr("width", x1.bandwidth()*2.9)
+        .attr("width", x1.bandwidth()*2.7)
         .attr("height", function(d) { return vis.height - y(d.value); })
-        .attr('fill', function(d) {
-            if(d.playoffs == "TRUE"){
+        .attr('fill', function(d, i) {
+            console.log(d.Team)
+            if(d.playoffs == "TRUE" && d.city=="Seattle Seahawks"){
+                return 'url(#diagonalHatchSea)'
+            }
+            if(d.playoffs == "TRUE" && d.city!="Seattle Seahawks") {
                 return 'url(#diagonalHatch)'
-
             }
             if(d.playoffs == "FALSE"){
                 return 'none'
             }
+
         }).on("mouseover", function(d) {
             tip.show()
             $("#tipText").html(d.city + "<br/>" + d.key + ": " + d.value + "W-L:%" + d["WL"]);
-            //d3.select(this).style("opacity", 1)
+            d3.select(this).style("opacity", 1)
 
         })
         .on("mouseout", function(d) {
             tip.hide()
-            // d3.select(this).style("opacity", 0.8)
+            d3.select(this).style("opacity", 0.8)
 
         })
 
 
 
+    //Add the standard colours
     group = g.append("g")
         .selectAll("g")
         .data(vis.data)
@@ -385,62 +395,46 @@ Rushing.prototype.updateVis = function(){
                 });
         })
         .enter().append("rect")
-        .attr("x", function(d) { return (x1(d.key)) *2.9; })
+        .attr("x", function(d) {
+            return ((x1(d.key)) *2.7) - 8;
+        })
         .attr("class", 'bar')
         .attr("y", function(d) { return y(d.value); })
-        .attr("width", x1.bandwidth()*2.9)
+        .attr("width", x1.bandwidth()*2.8)
         .attr("height", function(d) { return vis.height - y(d.value); })
         .attr("fill", function(d) {
-
-                if (d.city=="Seattle Seahawks"){
+                if(d.city=="Seattle Seahawks"){
                     return z2(d.key);
-
-                } else{
+                }else{
                     return z(d.key); }
-
             }
-
         )
         .attr("stroke", function(d) {
-
                 if(d.city=="Seattle Seahawks"){
                     return "#E82C0C";
 
                 }else{
                     return "black"
                 }
-
             }
-
         )
         .attr("stroke-width", function(d) {
 
-                if(d.city==="Seattle Seahawks"){
-                    return 3;
+                if(d.city=="Seattle Seahawks"){
+                    return 1.5;
 
                 }else{
                     return 1 }
             }
         )
-
-
-
         .style("opacity", 0.8)
         .on("mouseover", function(d) {
-
             tip.show()
             $("#tipText").html(d.city + "<br/>" + d.key + ": " + d.value + "<br/>W-L:%: " + d.wl);
-            //d3.select(this).style("opacity", 1)
-
         })
         .on("mouseout", function(d) {
             tip.hide()
-            //d3.select(this).style("opacity", 0.8)
-
         })
-
-
-
 
 
     //Find the mean RUSHING yards
@@ -450,15 +444,17 @@ Rushing.prototype.updateVis = function(){
     var rushingAverage = rushingSum/vis.data.length;
     var rushingLine = d3.line()
         .x(function(d, i) {
-            if(vis.data.length ==12) {
+            console.log(vis.data.length)
+
+            if(vis.data.length ==15) {
+                console.log(vis.data.length)
                 return (i * (vis.width / vis.data.length + 5.5));
             }
-            if(vis.data.length ==19) {
-                return (i * (vis.width / vis.data.length + 2));
+            if(vis.data.length ==16) {
+                return (i * (vis.width / vis.data.length + 4.5));
             }
             else{
                 return (i * (vis.width / vis.data.length + 1.5));
-
             }
         })
         .y(function(d, i) { return y(rushingAverage); });
@@ -475,15 +471,14 @@ Rushing.prototype.updateVis = function(){
     var passingAverage = passingSum/vis.data.length;
     var passingLine = d3.line()
         .x(function(d, i) {
-            if(vis.data.length ==12) {
+            if(vis.data.length ==15) {
                 return (i * (vis.width / vis.data.length + 5.5));
             }
-            if(vis.data.length ==19) {
-                return (i * (vis.width / vis.data.length + 2));
+            if(vis.data.length ==16) {
+                return (i * (vis.width / vis.data.length + 4.5));
             }
             else{
                 return (i * (vis.width / vis.data.length + 1.5));
-
             }
         })
         .y(function(d, i) { return y(passingAverage); });
@@ -494,7 +489,6 @@ Rushing.prototype.updateVis = function(){
         .append("path")
         .datum(vis.data)
         .attr("d", passingLine);
-
 
     // Add the text for the mean lines
     g.append("text")
@@ -510,7 +504,6 @@ Rushing.prototype.updateVis = function(){
         .attr("dy", "0.32em")
         .attr("class", "meanText")
         .text("Mean passing yards");
-
 
     g.append("g")
         .attr("class", "axis")
@@ -543,7 +536,9 @@ Rushing.prototype.updateVis = function(){
         .attr("x", vis.width - 19)
         .attr("width", 19)
         .attr("height", 19)
-        .attr("fill", z);
+        .attr("fill", z)
+
+
 
     legend.append("text")
         .attr("x", vis.width - 24)
@@ -552,16 +547,12 @@ Rushing.prototype.updateVis = function(){
         .text(function(d) { return d; });
 
 
-
-    var pat = g.append("rect")
+    pat = g.append("rect")
         .attr("x", vis.width)
         .attr("y", 30)
         .attr("width", 19)
         .attr("height", 19)
-        .attr("fill", 'url(#diagonalHatch)');
-
-
-
+        .attr("fill", 'url(#diagonalHatch)')
 
     vis.svg.append("text")
         .attr("font-family", "sans-serif")
@@ -571,7 +562,4 @@ Rushing.prototype.updateVis = function(){
         .attr("y", 70)
         .attr("dy", "0.32em")
         .text("Made Playoffs");
-
-
-
 }

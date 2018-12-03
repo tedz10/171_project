@@ -1,0 +1,32 @@
+Team,City,Rushing,Passing,Conference,WL,Wins,Loss,Playoffs
+ARI,Arizona Cardinals,1308,3808,NFC,0.813,13,3,TRUE
+ATL,Atlanta Falcons,1498,4553,NFC,0.5,8,8,
+BAL,Baltimore Ravens,2019,3819,AFC,0.313,5,11,TRUE
+BUF,Buffalo Bills,1482,3614,AFC,0.5,8,8,
+CAR,Carolina Panthers,2036,3511,NFC,0.938,15,1,TRUE
+CHI,Chicago Bears,1441,3792,NFC,0.375,6,10,
+CIN,Cincinnati Bengals,2147,3421,AFC,0.75,12,4,TRUE
+CLE,Cleveland Browns,1728,3465,AFC,0.188,3,13,
+DAL,Dallas Cowboys,2354,3784,NFC,0.25,4,12,TRUE
+DEN,Denver Broncos,1785,4661,AFC,0.75,12,4,TRUE
+DET,Detroit Lions,1422,4030,NFC,0.438,7,9,TRUE
+GB,Green Bay Packers,1917,4261,NFC,0.625,10,6,TRUE
+HOU,Houston Texans,2161,3352,AFC,0.563,9,7,
+IND,Indianapolis Colts,1612,4894,AFC,0.5,8,8,
+JAC,Jacksonville Jaguars,1633,3001,AFC,0.313,5,11,
+KC,Kansas City Chiefs,1918,3182,AFC,0.688,11,5,
+MIA,Miami Dolphins,1872,3729,AFC,0.375,6,10,
+MIN,Minnesota Vikings,1804,3244,NFC,0.688,11,5,
+NE,New England Patriots,1727,4121,AFC,0.75,12,4,TRUE
+NO,New Orleans Saints,1818,4764,NFC,0.438,7,9,
+NYG,New York Giants,1603,4272,NFC,0.375,6,10,
+NYJ,New York Jets,2280,2946,AFC,0.625,10,6,
+OAK,Oakland Raiders,1240,3275,AFC,0.438,7,9,
+PHI,Philadelphia Eagles,1992,4356,NFC,0.438,7,9,
+PIT,Pittsburgh Steelers,1752,4825,AFC,0.625,10,6,TRUE
+SD,San Diego Chargers,1367,4098,AFC,0.25,4,12,
+SEA,Seattle Seahawks,2762,3250,NFC,0.625,10,6,TRUE
+SF,San Francisco 49ers,2176,3063,NFC,0.438,5,11,
+TB,Tampa Bay Buccaneers,1375,3297,NFC,0.375,6,10,
+TEN,Tennessee Titans,1447,3412,AFC,0.188,3,13,
+WAS,Washington Redskins,1691,4047,NFC,0.563,9,7,

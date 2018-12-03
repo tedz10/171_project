@@ -1,0 +1,649 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>NFL Project</title>
+
+</head>
+
+
+<body>
+
+
+	<div class="parallax" id = "p0">
+		<div class = "caption">
+			<span class = "border"> WHAT'S IT TAKE TO MAKE THE PLAYOFFS? </span>
+		</div>
+	</div>
+
+
+
+
+	<!---->
+	<!---->
+	<!--INTRODUCTION-->
+	<!---->
+	<!---->
+
+	<div class = "info white" id = "info1">
+		<h3>IT'S THE PLAYOFFS BABY</h3>
+		<hr>
+		<!--<br>-->
+		<div class="row">
+			<div class = "col-md-4"></div>
+			<div class="col-md-4">
+				<p class = "large-font">Making the playoffs in the NFL is a big deal.</p>
+
+				<p>It's a make or break for some coaches and players whose multi-million dollar contracts are no guarantee
+				they'll still be on the roster next season if teams aren't still out on the field come January.</p>
+
+				<p>With 32 teams in the NFL and only 12 playoff spots, each team sets out every season with the goal of winning games and making the playoffs.
+					In this project, we seek to uncover and explore which features should coaches focus on to build a playoff caliber team</p>
+
+			</div>
+
+			<div class = "col-md-4"></div>
+		</div>
+
+	</div>
+	<div class="parallax" id = "p1">
+		<div class = "caption">
+			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+				FINDING THE BUILDING BLOCKS
+			</span>
+		</div>
+	</div>
+
+
+
+	<div class = "info" id = "info2">
+
+		<div class="container-fluid">
+			<div class="row">
+
+			</div>
+			<h2 id = "specific_name">EXAMINING KEY FACTORS</h2>
+
+		</div>
+		<hr>
+		<!--<br>-->
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class = "col-md-3">
+
+				</div>
+				<div class="col-md-6">
+
+					<aside class="pquote">
+						<blockquote>
+							<p class = "pquote">“There are no shortcuts to building a team each season. You build the foundation brick by brick” - Bill Belichick</p>
+						</blockquote>
+					</aside>
+					<br>
+
+					<p>While various NFL teams and coaches hold different football philosophies on how to play
+						the game, each organization ultimately has the same goal – to win games and make the
+						playoffs. </p>
+					<p>However, certain dynasties such as the Patriots have consistently made the
+						playoffs in the last decade, teams like the Browns fail to make a single importance.
+					</p>
+					<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams
+						from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.
+				</div>
+				<div class = "col-md-3">
+
+				</div>
+
+				<br>
+
+			</div>
+
+			<!--<hr class = "full">-->
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+
+			<div>
+				<!--<img src = "img/playbook1.png" style = "width:100%;">-->
+				<h3>FINDING PREDICTORS</h3>
+				<p>Click each node of the tree to see how a specific statistic relates to a team's playoff chances</p>
+				<div class="row">
+						<div class="col-md-12" id= "treeLegend"></div>
+					<div class="row">
+						<div class="col-md-12" id = "tree"></div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<div class="parallax" id = "p2">
+		<div class = "caption">
+			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+				OFFENSE WINS GAMES
+			</span>
+		</div>
+	</div>
+
+	<br>
+
+
+	<div class = "info" id = "info2">
+		<h2>FACTOR 1: POINTS PER GAME</h2>
+		<hr>
+		<!--<br>-->
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class = "col-md-3">
+
+				</div>
+				<div class="col-md-6 left">
+					<br>
+					<aside class="pquote">
+						<blockquote>
+							<p class = "pquote">“The Patriots have been winning the same way every year: lots and lots
+								of offense — with Tom Brady at the vanguard” - The Ringer </p>
+						</blockquote>
+					</aside>
+					<br>
+					<br>
+
+					<p>From 2010 - 2017, the New England Patriots dominated the league.
+						They won the AFC East all 8 years, won the AFC championship 4 times,
+						and won the Super Bowl 2 times. Unsurprisingly, they were a top 3 point scorer for
+						7 out of the 8 years.
+					</p>
+					<p>Compared with the entire NFL, the Patriots scored almost 50% more points every season
+						with the same consistency as the average of 32 teams. The bulk of the additional points
+						comes in the form of touchdowns, which stresses the advantage of touchdowns over field
+						goals.
+					</p>
+					<br>
+					<!--<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams-->
+					<!--from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.-->
+				</div>
+				<div class = "col-md-3">
+
+				</div>
+			</div>
+				<div class="container-fluid">
+
+					<h5>Mouse over an area to see what type of points were scored.</h5>
+					<!-- Visualization placeholders -->
+
+					<!--<div id="timeline"></div>-->
+					<div class="row">
+						<div class="col-md-6">
+							<div id="stacked-area-chart"></div>
+						</div>
+						<div class="col-md-6">
+							<div id="stacked-area-chart2"></div>
+						</div>
+					</div>
+
+				</div>
+
+
+		</div>
+
+	<br>
+
+
+
+
+
+		<!---->
+		<!---->
+		<!--DEFENSE-->
+		<!---->
+		<!---->
+
+	<div class="parallax" id = "p3">
+		<div class = "caption">
+			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+				THE BEST OFFENSE IS GOOD DEFENSE
+			</span>
+		</div>
+	</div>
+
+	<div class = "info" id = "info3">
+		<div class="container">
+
+			<br>
+			<h2>FACTOR 2: A STOUT DEFENSE</h2>
+
+			<hr>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class = "col-md-3">
+
+					</div>
+					<div class="col-md-6 left">
+						<!--<br>-->
+						<aside class="pquote">
+							<blockquote>
+								<p class = "pquote">“Offense sells tickets, but defense wins championships.”
+									- Bear Bryant </p>
+							</blockquote>
+						</aside>
+						<br>
+						<!--<br>-->
+						<br>
+
+						<p>The age-old adage "defense wins championships" may not necessarily hold in our decision tree. However
+							, defense is the second most important attribute in our decision tree. Teams that let up
+							more offensive yards were far less likely to make the playoffs. </p>
+
+						<p>In 2016, the Denver Broncos allowed significantly fewer yards than any other NFL team.
+							Despite analysts clamoring over high-powered offenses such as Carolina and New England,
+							the Denver defense led the organization to a success 12 - 4 record.
+						</p>
+						<p>
+							On their path through the playoffs, the defense held steadfast against both the Patriots
+							and Panthers to secure the Lombardi trophy, with star linebacker Von Miller winning MVP honors.
+						</p>
+						<!--<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams-->
+						<!--from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.-->
+					</div>
+					<div class = "col-md-3">
+
+					</div>
+					<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6 att1" id = "chart-area">
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+
+						<br>
+						<br>
+						<br>
+
+				<h5 id = "specific_name">Mouse over a data point to see team specific details</h5>
+			</div>
+			<div class="row">
+				<!--<div class="col-md-3 att1" id = "chart1">-->
+				<!--</div>-->
+				<!--<div class="col-md-3" id= "chart2">-->
+				<!--</div>-->
+				<!--<div class="col-md-3 att1" id = "chart3">-->
+				<!--</div>-->
+				<!--<div class="col-md-3" id= "chart4">-->
+				<!--</div>-->
+				<!--<div class="container content">-->
+
+					<!--<span class="logo glyphicon glyphicon-globe"></span>-->
+
+					<!-- Parent container for the scatterplot -->
+					<div id="chart-area-yards">
+
+					<!--</div>-->
+
+					<!--<p class="source-desc">Source: <a href="http://www.gapminder.org/data">http://www.gapminder.org/data</a></p>-->
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+				</div>
+
+			</div>
+
+			<br>
+		</div>
+	</div>
+
+
+
+	<br>
+
+
+		<!---->
+		<!---->
+		<!--RUN GAME-->
+		<!---->
+		<!---->
+
+	<div class="parallax" id = "p4">
+		<div class = "caption">
+			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+				POUND THE RUN GAME
+			</span>
+		</div>
+	</div>
+
+	<div class = "info">
+
+		<h2>FACTOR 3: A STRONG RUN GAME</h2>
+		<!--<p>A stout defense and a strong run game are generally regarded as the keys to any successful championship team. There is huge value in secure yards and controlling the clock, and our decision tree agrees. </p>-->
+		<hr>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class = "col-md-3">
+
+				</div>
+				<div class="col-md-6 left" >
+					<aside class="pquote">
+						<blockquote>
+							<p class = "pquote">This year alone, Tom Brady hit 500 career pass TD’s and Drew Brees broke
+								the all-time passing yards record - and more records are on the verge of being broken
+								as well. But that's not the only recipe for success.
+							</p>
+						</blockquote>
+					</aside>
+					<br>
+					<p>The NFL has emerged into a pass-heavy game, much more so than the history of the league has ever seen.
+						While passing records continue to fall with the incorporation of faster, spread offense, perhaps the run game is getting overlooked as the true key to success.
+					</p>
+					<p>
+						The Seattle Seahawks are a prime example of this. The 2014 Seahawks burst into the playoff scene on the back of Pro Bowl running back Marshawn Lynch’s 1306 rush yards and star quarterback Russell Wilson’s ability to scramble for nearly 900 yards.
+					</p>
+					<p>
+						Despite pundits and players’ declarations that year that the NFL “is a passing league now”, the Seahawks’ rushing power led them all the way to a second consecutive Super Bowl appearance that year.
+					</p>
+					<br>
+					<br>
+					<!--<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams-->
+					<!--from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.-->
+				</div>
+				<div class = "col-md-3">
+
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+
+		<form class="form-inline">
+			<div class="form-group">
+				<span>Sort by:<br/></span>
+				<br/>
+				<select id="select-order-type" class="form-control input-sm">
+					<option value="Rushing">Rushing</option>
+					<option value="Passing">Passing</option>
+					<option value="WL">Winning Percentage</option>
+
+				</select>
+			</div>
+						<div class="form-group">
+                            <select id="select-conf-type" class="form-control input-sm">
+                                <option value="All">All</option>
+                                <option value="AFC">AFC</option>
+                                <option value="NFC">NFC</option>
+
+                            </select>
+                        </div>
+
+		</form>
+	</div>
+
+			<div id = "info4"></div>
+
+	<div class = "rushInfo" >
+		<h4>Rushing By The Numbers</h4>
+		<div   id="tableClear">
+			<div class = "row">
+				<div class="rushingTable col-md-4" id="nfcTable"></div>
+				<div class="rushingTable col-md-4" id="afcTable"></div>
+			</div>
+		</div>	</div>
+
+
+
+	<div class="parallax" id = "p5">
+		<div class = "caption">
+			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+				TURNOVERS KILL
+			</span>
+		</div>
+	</div>
+
+	<div class = "info" id = "info6">
+		<h2>FACTOR 4: TURNOVER DIFFERENTIAL</h2>
+		<!--A team needs the balls in their hands to score and win games. Likewise, the most successful teams are those that can hang on to the ball and take it away from their opponents.-->
+		<hr>
+		<!--<br>-->
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class = "col-md-3">
+
+				</div>
+				<div class="col-md-6 left" id= "tree">
+					<aside class="pquote">
+						<blockquote>
+							<p class = "pquote">"Butler’s interception comes off as a great play, which it really was, at the biggest time of the year” - Tom Brady
+							</p>
+
+						</blockquote>
+					</aside>
+					<!--<br>-->
+					<br>
+					<p>In Superbowl 49, Malcolm Butler iconically picked up Russell WIlson on the goal line
+						to seal the Patriots’ 24-21 victory over the Seahawks. Needless to say, big plays such as
+						interceptions and fumbles can shift the momentum in a game and are huge determinants to the
+						success of a team.
+						</p>
+					<p>
+						In 2015, the Carolina Panthers led the league with a 15 - 1 record and won the NFC championships
+						. Part of this success was driven by star All-Pro cornerback Josh Norman and linebacker Luke Keuchly.
+						</p>
+					<p>The Panthers were able to rack up a +26 turnover differential, with 24 picks verse 11 intercept
+						ions thrown and 28 fumble recoveries verse 15 lost. The Panthers dominated the NFL with their
+						ability to take the ball away, and ultimately helped them land a spot in the Superbowl.
+					</p>
+					<br>
+					<br>
+					<!--<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams-->
+					<!--from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.-->
+				</div>
+				<div class = "col-md-3">
+
+				</div>
+			</div>
+
+		</div>
+
+		<div id = "turnoverChart"></div>
+
+		<div class="row turnoverStats">
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-5">
+						<h3 id = "specific_name">CAR: 2015</h3>
+						<table style="width:100%" class="table sortable" id="mytable">
+							<thead>
+							<tr>
+								<th>Statistic</th>
+								<th>Value</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Turnover Differential</td>
+								<th>26 </th>
+							</tr>
+							<tr>
+								<td>Number of Interceptions</td>
+								<th>24</th>
+							</tr>
+							<tr>
+								<td>Number of Interceptions Thrown</td>
+								<th>11</th>
+							</tr>
+							<tr>
+								<td>Number of Fumbles Lost</td>
+								<th>15</th>
+							</tr>
+							<tr>
+								<td>Number of Fumbles Recovered</td>
+								<th>28</th>
+							</tr>
+							<tr>
+								<td>Playoffs?</td>
+								<th>TRUE</th>
+							</tr>
+
+							</tbody>
+						</table>
+						<!--<div class="col-md-4" id="words">-->
+							<!--<p>Team: CAR</p>-->
+							<!--<p>Turnover Differential: 26</p>-->
+							<!--<p>Number of interceptions: 24</p>-->
+							<!--<p>Number of interceptions thrown: 11</p>-->
+							<!--<p>Number of fumbles lost: 15</p>-->
+							<!--<p>Number of fumbles recovered: 28</p>-->
+							<!--<p>Total wins: 15</p>-->
+						<!--</div>-->
+					</div>
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-5">
+						<h3 id = "specific_name2">Click a Bar for More Info</h3>
+						<table style="width:100%" class="table sortable" id="mytable">
+							<thead>
+							<tr>
+								<th>Statistic</th>
+								<th>Value</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Turnover Differential</td>
+								<th id = "height"></th>
+							</tr>
+							<tr>
+								<td>Number of Interceptions</td>
+								<th id = "numberofinterceptions"></th>
+							</tr>
+							<tr>
+								<td>Number of Interceptions Thrown</td>
+								<th id = "numberofinterceptionsthrown"></th>
+							</tr>
+							<tr>
+								<td>Number of Fumbles Lost</td>
+								<th id ="numberoffumbleslost"></th>
+							</tr>
+							<tr>
+								<td>Number of Fumbles Recovered</td>
+								<th id = "numberoffumblesrecovered"></th>
+							</tr>
+							<tr>
+								<td>Playoffs?</td>
+								<th id = "playoffmade"></th>
+							</tr>
+
+							</tbody>
+						</table>
+						<!--<div class="column labelHeading" id="details"><div id="buildingName"></div>-->
+							<!--&lt;!&ndash;<div id="season" class="labels"></div> </br>&ndash;&gt;-->
+							<!--<div id="height" class="labels"></div>-->
+							<!--<div id="numberofinterceptions" class="labels"></div>-->
+							<!--<div id="numberofinterceptionsthrown" class="labels"></div>-->
+							<!--<div id="numberoffumbleslost" class="labels"></div>-->
+							<!--<div id="numberoffumblesrecovered" class="labels"></div></br>-->
+							<!--<div id="playoffmade" class="labels"></div></div>-->
+					<!--</div>-->
+					</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	</div>
+
+
+
+
+
+
+		<div class="parallax" id = "p6">
+			<div class = "caption">
+			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
+				ABOUT US
+			</span>
+			</div>
+		</div>
+
+		<div class = "info" id = "info7">
+			<!--<h2>FACTOR 4: TURNOVER DIFFERENTIAL</h2>-->
+			<!--A team needs the balls in their hands to score and win games. Likewise, the most successful teams are those that can hang on to the ball and take it away from their opponents.-->
+			<!--<hr>-->
+			<!--<br>-->
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class = "col-md-3">
+						<h5>Ray An</h5>
+						<hr>
+						<p>Ray is ... </p>
+					</div>
+					<div class="col-md-3">
+						<h5>Curtis Hsu</h5>
+						<hr>
+					</div>
+					<div class = "col-md-3">
+						<h5>Kelly McDougall</h5>
+						<hr>
+					</div>
+
+					<div class = "col-md-3">
+						<h5>Ted Zhu</h5>
+						<hr>
+					</div>
+
+
+				</div>
+
+			</div>
+
+
+
+
+
+
+		</div>
+
+
+
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3-tip.js"></script>
+
+	<!-- Your implementation -->
+	<script src="js/main.js"></script>
+	<script src="js/linegraph.js"></script>
+	<script src="js/barchart.js"></script>
+	<script src = "js/tree.js"></script>
+	<script src="js/rushing.js"></script>
+	<script src="js/stackedAreaChart.js"></script>
+	<script src="js/turnover.js"></script>
+	<!--<script src="//d3js.org/d3.v3.min.js"></script>-->
+	<!--<script src="js/slider.js"></script>-->
+</body>
+</html>

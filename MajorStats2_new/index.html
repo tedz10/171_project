@@ -8,10 +8,40 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>NFL Project</title>
 
+
+	<script type="text/javascript" src="./lib/d3.v4.js" charset="utf-8"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poppins|Raleway|Roboto+Mono|Varela+Round" rel="stylesheet">
+	<script src="./lib/prism.js" charset="utf-8"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+	<script src="//d3js.org/d3-geo-projection.v1.min.js"></script>
+	<script src="./lib/topojson.min.js"></script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+	<!-- tomorrow  dark-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+        hljs.initHighlightingOnLoad();
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- load scripts -->
+	<script src="./js/newinitialisation.js"></script>
+	<script src="./js/color_labels.js"></script>
+	<script src="./js/fade.js"></script>
+	<script src="./js/focus_pointupdate.js"></script>
+
+	<script src="./js/geo_map.js"></script>
+	<script src="./js/animation_controlupdate.js"></script>
+
+	<script src="./js/tracesupdate.js"></script>
+	<script src="./js/generate_visupdate.js"></script>
+
 </head>
 
 
 <body>
+
+
+
 
 
 	<div class="parallax" id = "p0">
@@ -116,7 +146,7 @@
 				<h3>FINDING PREDICTORS</h3>
 				<p>Click each node of the tree to see how a specific statistic relates to a team's playoff chances</p>
 				<div class="row">
-						<div class="col-md-12" id= "treeLegend"></div>
+						<div class="col-md-12" id = "treeLegend"></div>
 					<div class="row">
 						<div class="col-md-12" id = "tree"></div>
 					</div>
@@ -192,6 +222,31 @@
 				</div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+
+		<div class = "container-fluid">
+
+			<h5>If you want to see a visualization of this over time, <a href="https://tedz10.github.io/nfl/overtime.html">
+				click here</a></h5>
 		</div>
 
 	<br>
@@ -254,18 +309,20 @@
 						<!--<p>To uncover the secrets of building a playoff caliber team, we collected data on all 32 teams-->
 						<!--from 2010 to 2017 and crafted a decision tree to see which features were critical to a winning team.-->
 					</div>
-					<div class = "col-md-3">
-
-					</div>
-					<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-3">
-					</div>
-					<div class="col-md-6 att1" id = "chart-area">
-					</div>
-					<div class="col-md-3">
-					</div>
 				</div>
+					<!--<div class = "col-md-3">-->
+
+					<!--</div>-->
+
+					<!--<div class="container-fluid">-->
+				<!--<div class="row">-->
+					<!--<div class="col-md-3">-->
+					<!--</div>-->
+					<!--<div class="col-md-6 att1" id = "chart-area">-->
+					<!--</div>-->
+					<!--<div class="col-md-3">-->
+					<!--</div>-->
+				<!--</div>-->
 
 						<br>
 						<br>
@@ -273,6 +330,21 @@
 
 				<h5 id = "specific_name">Mouse over a data point to see team specific details</h5>
 			</div>
+			<!--<div class="row">-->
+				<!--<div class="col-md-3 att1" id = "chart1">-->
+				<!--</div>-->
+				<!--<div class="col-md-3" id= "chart2">-->
+				<!--</div>-->
+				<!--<div class="col-md-3 att1" id = "chart3">-->
+				<!--</div>-->
+				<!--<div class="col-md-3" id= "chart4">-->
+				<!--</div>-->
+				<!--<div class="container content">-->
+
+
+
+
+
 			<div class="row">
 				<!--<div class="col-md-3 att1" id = "chart1">-->
 				<!--</div>-->
@@ -284,10 +356,12 @@
 				<!--</div>-->
 				<!--<div class="container content">-->
 
-					<!--<span class="logo glyphicon glyphicon-globe"></span>-->
+				<!--<span class="logo glyphicon glyphicon-globe"></span>-->
 
-					<!-- Parent container for the scatterplot -->
-					<div id="chart-area-yards">
+				<!-- Parent container for the scatterplot -->
+				<div class = "col-md-1"> </div>
+				<div class = "col-md-11"><div id="chart-area-yards"></div>
+
 
 					<!--</div>-->
 
@@ -295,6 +369,28 @@
 
 				</div>
 			</div>
+
+
+
+
+
+
+
+
+
+		</div>
+
+					<!--<span class="logo glyphicon glyphicon-globe"></span>-->
+
+					<!-- Parent container for the scatterplot -->
+					<!--<div id="chart-area-yards">-->
+
+					<!--</div>-->
+
+					<!--<p class="source-desc">Source: <a href="http://www.gapminder.org/data">http://www.gapminder.org/data</a></p>-->
+
+				<!--</div>-->
+			<!--</div>-->
 
 			<br>
 			<br>
@@ -370,39 +466,90 @@
 		<br>
 		<br>
 
-		<form class="form-inline">
-			<div class="form-group">
-				<span>Sort by:<br/></span>
-				<br/>
-				<select id="select-order-type" class="form-control input-sm">
-					<option value="Rushing">Rushing</option>
-					<option value="Passing">Passing</option>
-					<option value="WL">Winning Percentage</option>
 
-				</select>
-			</div>
+		<div class = "container-fluid">
+			<div class = "row">
+
+				<div class = "col-md-2"></div>
+
+				<div class = "col-md-10">
+					<form class="form-inline">
 						<div class="form-group">
-                            <select id="select-conf-type" class="form-control input-sm">
-                                <option value="All">All</option>
-                                <option value="AFC">AFC</option>
-                                <option value="NFC">NFC</option>
+							<span>Sort by:<br/></span>
+							<br/>
+							<select id="select-order-type" class="form-control input-sm">
+								<option value="Rushing">Rushing</option>
+								<option value="Passing">Passing</option>
+								<option value="WL">Winning Percentage</option>
 
-                            </select>
-                        </div>
+							</select>
+						</div>
+						<div class="form-group">
+							<select id="select-conf-type" class="form-control input-sm">
+								<option value="All">All</option>
+								<option value="AFC">AFC</option>
+								<option value="NFC">NFC</option>
 
-		</form>
+							</select>
+						</div>
+
+					</form>
+				</div>
+
+			</div>
+
+
+		</div>
+
+
 	</div>
 
-			<div id = "info4"></div>
+	<div class = "container-fluid">
+		<div class = "row">
 
-	<div class = "rushInfo" >
-		<h4>Rushing By The Numbers</h4>
-		<div   id="tableClear">
-			<div class = "row">
-				<div class="rushingTable col-md-4" id="nfcTable"></div>
-				<div class="rushingTable col-md-4" id="afcTable"></div>
+			<div class = "col-md-2">
+
 			</div>
-		</div>	</div>
+
+			<div class = "col-md-10">
+				<div id = "info4"></div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+		<br>
+		<br>
+
+	<div class = "container-fluid">
+		<div class = "row">
+
+			<div class = "col-md-2">
+			</div>
+
+
+			<!--<div class = "col-md-11">-->
+				<div class = "rushInfo" >
+					<h4>Rushing By The Numbers</h4>
+					<p>Click a column name to rearrange the table by that statistic. </p>
+					<div   id="tableClear">
+						<div class = "row">
+							<div class="rushingTable col-md-4" id="nfcTable"></div>
+							<div class="rushingTable col-md-4" id="afcTable"></div>
+						</div>
+					</div>
+				</div>
+			<!--</div>-->
+
+			<!--<div class = "col-md-1"></div>-->
+
+		</div>
+
+	</div>
+
 
 
 
@@ -425,7 +572,7 @@
 				<div class = "col-md-3">
 
 				</div>
-				<div class="col-md-6 left" id= "tree">
+				<div class="col-md-6 left">
 					<aside class="pquote">
 						<blockquote>
 							<p class = "pquote">"Butler’s interception comes off as a great play, which it really was, at the biggest time of the year” - Tom Brady
@@ -460,7 +607,21 @@
 
 		</div>
 
-		<div id = "turnoverChart"></div>
+		<div class = "container-fluid">
+
+			<div class = "row">
+
+				<div class = "col-md-1">
+
+				</div>
+
+				<div class = "col-md-11">
+					<div id = "turnoverChart"></div>
+				</div>
+
+			</div>
+
+		</div>
 
 		<div class="row turnoverStats">
 
@@ -516,7 +677,7 @@
 					<div class="col-md-2">
 					</div>
 					<div class="col-md-5">
-						<h3 id = "specific_name2">Click a Bar for More Info</h3>
+						<h3 id = "specific_name2">Click a Bar to Compare</h3>
 						<table style="width:100%" class="table sortable" id="mytable">
 							<thead>
 							<tr>
@@ -578,54 +739,111 @@
 
 
 
-		<div class="parallax" id = "p6">
-			<div class = "caption">
+
+
+	<div class="parallax" id = "p6">
+		<div class = "caption">
 			<span class = "border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">
 				ABOUT US
 			</span>
-			</div>
 		</div>
+	</div>
 
-		<div class = "info" id = "info7">
-			<!--<h2>FACTOR 4: TURNOVER DIFFERENTIAL</h2>-->
-			<!--A team needs the balls in their hands to score and win games. Likewise, the most successful teams are those that can hang on to the ball and take it away from their opponents.-->
-			<!--<hr>-->
-			<!--<br>-->
+	<div class = "info" id = "info7">
+		<!--<h2>FACTOR 4: TURNOVER DIFFERENTIAL</h2>-->
+		<!--A team needs the balls in their hands to score and win games. Likewise, the most successful teams are those that can hang on to the ball and take it away from their opponents.-->
+		<!--<hr>-->
+		<!--<br>-->
 
-			<div class="container-fluid">
-				<div class="row">
-					<div class = "col-md-3">
-						<h5>Ray An</h5>
-						<hr>
-						<p>Ray is ... </p>
-					</div>
-					<div class="col-md-3">
-						<h5>Curtis Hsu</h5>
-						<hr>
-					</div>
-					<div class = "col-md-3">
-						<h5>Kelly McDougall</h5>
-						<hr>
-					</div>
-
-					<div class = "col-md-3">
-						<h5>Ted Zhu</h5>
-						<hr>
-					</div>
-
-
+		<div class="container-fluid">
+			<div class="row">
+				<div class = "col-md-3">
+					<h5>Ray An</h5>
+					<hr>
+					<p>Ray (Dongzhengyang) An: Currently pursuing Master of Data Science degree at Harvard University,
+						interested in Experiment Design, Network and Data visualization.</p>
+				</div>
+				<div class="col-md-3">
+					<h5>Curtis Hsu</h5>
+					<hr>
+					<p>Current senior at Harvard studying statistics, computer science, and economics.</p>
+				</div>
+				<div class = "col-md-3">
+					<h5>Kelly McDougall</h5>
+					<hr>
+					<p>Currently works at MIT is pursuing a graduate degree in Data Science at Harvard Extension.</p>
 				</div>
 
+				<div class = "col-md-3">
+					<h5>Ted Zhu</h5>
+					<hr>
+					<p>Current senior at Harvard studying computer science and statistics.</p>
+				</div>
 			</div>
-
-
-
-
-
-
 		</div>
 
+		<br>
+		<br>
 
+		<div class = "container-fluid">
+			If you'd like to play around the data yourself, this data was scraped using the <a href="https://www.rdocumentation.org/packages/nflscrapR/versions/1.4.0">
+			NFLScrapR package </a>. It can also be found under the folder "dt" at <a href = "https://github.com/tedz10/nfl">
+			this repository </a>.
+		</a>
+		</div>
+
+	</div>
+	<br>
+	<br>
+	<br>
+
+
+	<!--<div class = "container-fluid" id = "scatter">-->
+		<!--<div class = "row">-->
+			<!--<div class = "col-md-12">-->
+
+				<!--<div id="bubble_div">-->
+					<!--<h2></h2>-->
+					<!--<div style="display:table;box-sizing:border-box;width:100%;font:8px Arial;">-->
+
+
+					<!--</div>-->
+					<!--<div class="map">-->
+						<!--<div id="bubble_chart_div" style="height:70%">-->
+							<!--<script src="./js/mainupdate.js">-->
+
+							<!--</script>-->
+						<!--</div>-->
+
+						<!--<div style="display: table;box-sizing:border-box;width:100%;">-->
+							<!--<div class="play_btn">-->
+								<!--<input type="button" id="play_btn" value="Start" style="font-size:16px;width:60px;height:40px" onclick="play_btn()" />-->
+							<!--</div>-->
+							<!--<div id="slider_div" class="time_line">-->
+							<!--</div>-->
+							<!--<div style="display: table;box-sizing:border-box;width:100%;">-->
+								<!--<div style="float:left;margin-left:55px;width:40%;height:50%;">-->
+									<!--<br>-->
+									<!--&lt;!&ndash;<input id='trace_checkBox'>&ndash;&gt;-->
+									<!--&lt;!&ndash;<input id='line_checkBox'>&ndash;&gt;-->
+									<!--<br><br>-->
+
+								<!--</div>-->
+
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+
+
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+
+
+	<br>
+	<br>
+	<br>
 
 
 	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
@@ -639,10 +857,11 @@
 	<script src="js/main.js"></script>
 	<script src="js/linegraph.js"></script>
 	<script src="js/barchart.js"></script>
-	<script src = "js/tree.js"></script>
+	<script src="js/tree.js"></script>
 	<script src="js/rushing.js"></script>
 	<script src="js/stackedAreaChart.js"></script>
 	<script src="js/turnover.js"></script>
+
 	<!--<script src="//d3js.org/d3.v3.min.js"></script>-->
 	<!--<script src="js/slider.js"></script>-->
 </body>
